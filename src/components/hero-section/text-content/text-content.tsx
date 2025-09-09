@@ -3,7 +3,7 @@ import styles from './text-content.module.scss'
 
 export default function HeroText () {
     return (
-            <div className={styles['content']}>
+            <div className={`${styles['content']} pad-txt-box border-txt-box std-glas-effect-shadow`}>
                 <h3 className="sub-header-font-small">Der Schulwechsel steht bevor</h3>
                 <p className="main-txt-font">Das vierte Volksschuljahr hat begonnen. Viele von euch stellen sich noch einige Fragen diesbezüglich.</p>
                 <ul className="main-txt-font">

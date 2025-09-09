@@ -1,19 +1,12 @@
-
-
- .content {
+.content {
   display: flex;
   flex-direction: column;
-    padding: 24px;
-    border: solid 2px black;
-    border-radius: 24px;
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
-    width: 40dvw;
-    margin-left: auto;
 
-    > a {
-      text-align: right;
-    }
+  width: 40dvw;
+  margin-left: auto;
+
+  > a {
+    width: fit-content;
+    margin-left: auto;
   }
+}
