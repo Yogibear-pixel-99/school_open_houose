@@ -1,20 +1,18 @@
+import styles from "./main-section.module.scss";
+import SingleSchool from "./single-school/single-school";
 
-import styles from './main-section.module.scss';
+export default function MainSection() {
+  const allSchools = {
+    name: "Testschule",
+    town: "Teststadt",
+    hrefPath: "Testlink",
+    dayOfOpen: "TestTag",
+    focus: "Testschwerpunkt",
+  };
 
-export default function MainSection () {
-    return (
-<section className={`${styles['section']} pad-main`}>
-    <div className={`${styles['main-content']} border-txt-box std-glas-effect-shadow pad-txt-box`}>
-        <h2>Test</h2>
-        <h2>Test</h2>
-        <h2>Test</h2>
-        <h2>Test</h2>
-        <h2>Test</h2>
-        <h2>Test</h2>
-        <h2>Test</h2>
-        <h2>Test</h2>
-        <h2>Test</h2>
-    </div>
-</section>
-    );
+  return (
+    <section className={`${styles["section"]} pad-main`}>
+        <SingleSchool {...allSchools} /> 
+    </section>
+  );
 }
