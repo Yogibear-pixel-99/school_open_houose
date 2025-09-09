@@ -1,0 +1,23 @@
+
+
+.main-content {
+    position: relative;
+    background-color:rgba(0, 0, 0, 0.144);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    height: 100dvh;
+    max-height: 100%;
+    
+
+    @media (min-width: 1281px) {
+       background-image: url('../../../assets/images/header/background-3176447_1920.jpg');
+    }
+    @media (max-width: 1280px) {
+      background-image: url('../../../assets/images/header/background-3176447_1280.jpg');
+    }
+    @media (max-width: 640px) {
+       background-image: url('../../../assets/images/header/background-3176447_640.jpg');
+    }
+}
+
