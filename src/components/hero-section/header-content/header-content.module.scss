@@ -1,27 +1,63 @@
-@use '../../../shared/styles/typography';
+@use "../../../shared/styles/mixins" as mixins;
 
 .main-content {
-    display: flex;
-    align-items: center;
-    padding: 0 48px;
-    gap: 48px;
-    position: relative;
-    background-color:rgba(0, 0, 0, 0.144);
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: cover;
-    height: 200px;
-    max-height: 100%;
-    
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 48px;
+  gap: 48px;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.144);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  height: 140px;
+  max-height: 100%;
+  border: solid 2px black;
 
-    @media (min-width: 1281px) {
-       background-image: url('../../../assets/images/header/background-3176447_1920.jpg');
+  @media (min-width: 1281px) {
+    background-image: url("../../../assets/images/header/background-3176447_1920.jpg");
+  }
+  @media (max-width: 1280px) {
+    background-image: url("../../../assets/images/header/background-3176447_1280.jpg");
+  }
+  @media (max-width: 640px) {
+    background-image: url("../../../assets/images/header/background-3176447_640.jpg");
+  }
+
+  > div {
+    @include mixins.flexspbtw();
+    gap: 64px;
+
+    > nav {
+      @include mixins.flexspbtw();
+      gap: 24px;
+      align-self: end;
+      
+
+      > a {
+         padding: 4px 8px;
+         border-radius: 12px;
+         border: solid 1px #174626;
+         
+        &:hover {
+         //  color: #174626;
+          background-color: #90025742;
+          border: solid 1px #900257;
+        }
+      }
     }
-    @media (max-width: 1280px) {
-      background-image: url('../../../assets/images/header/background-3176447_1280.jpg');
-    }
-    @media (max-width: 640px) {
-       background-image: url('../../../assets/images/header/background-3176447_640.jpg');
-    }
+  }
 }
 
+.img-wrapper {
+  height: 95px;
+  width: 140px;
+  @include mixins.flexspbtw(center, center);
+
+  > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+  }
+}
