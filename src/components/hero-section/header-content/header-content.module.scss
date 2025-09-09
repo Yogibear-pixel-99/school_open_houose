@@ -1,12 +1,16 @@
-
+@use '../../../shared/styles/typography';
 
 .main-content {
+    display: flex;
+    align-items: center;
+    padding: 0 48px;
+    gap: 48px;
     position: relative;
     background-color:rgba(0, 0, 0, 0.144);
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
-    height: 100dvh;
+    height: 200px;
     max-height: 100%;
     
 
