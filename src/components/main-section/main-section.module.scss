@@ -1,11 +1,14 @@
-
-
 .section {
-    background-image: url('../../assets/images/main-section/banner_2887331_1920.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url("../../assets/images/main-section/banner_2887331_1920.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 48px;
+
+
 }
 
 .main-content {
-
 }
