@@ -3,6 +3,7 @@ import MainSection from './components/all-schools-section/all-schools';
 import './App.scss'
 import SectionSeparator from './shared/components/section-separator/section-separator';
 import SchoolInfos from './components/school-infos-section/school-infos';
+import ContactMainSection from './components/contact-section/contact';
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
       <SectionSeparator />
       <SchoolInfos />
       <SectionSeparator />
+      <ContactMainSection />
           </>
   )
 }
