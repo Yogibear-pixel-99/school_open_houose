@@ -1,0 +1,23 @@
+@use "./../../../shared/styles/mixins" as mixins;
+
+.main-content {
+    @include mixins.flexspbtw(center, flex-start);
+    flex-direction: column;
+
+    > label {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    > label:nth-child(5) {
+        flex-direction: row-reverse;
+        width: auto;
+        // margin-right: auto;
+        justify-self: flex-start;
+
+
+
+    }
+}
