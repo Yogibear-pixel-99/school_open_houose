@@ -1,4 +1,4 @@
-import styles from "./header-content.module.scss";
+import styles from "./header.module.scss";
 
 export default function Header() {
   return <section className={`${styles["main-content"]} pad-main-header`}>

@@ -1,5 +1,5 @@
 import styles from "./hero-section.module.scss";
-import Header from "./header-content/header-content";
+import Header from "../header/header";
 import HeroText from "./text-content/text-content";
 
 export default function HeroSection() {

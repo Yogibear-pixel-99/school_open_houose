@@ -6,6 +6,10 @@
   padding: 12px 64px;
 }
 
+.pad-main-footer {
+  padding: 12px 64px;
+}
+
 .pad-txt-box {
   padding: 32px;
 }
@@ -23,20 +27,20 @@
 }
 
 .colored-bg {
-      background: linear-gradient(
-    to bottom,         
-    #5D5E60,
-    #9D6AAC,
-    #B5B3D8,
-   #00AFF0,
-    #03ACED,
-    #87C22C,
-   #CBD743,
-   #FBD862,
-   #F7AD58,
-   #EA1519,
-   #F1635F,
-   #DA8B50
+  background: linear-gradient(
+    to bottom,
+    #5d5e60,
+    #9d6aac,
+    #b5b3d8,
+    #00aff0,
+    #03aced,
+    #87c22c,
+    #cbd743,
+    #fbd862,
+    #f7ad58,
+    #ea1519,
+    #f1635f,
+    #da8b50
   );
   filter: grayscale(0.7);
 }

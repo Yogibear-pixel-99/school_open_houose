@@ -1,0 +1,31 @@
+.logo-blue {
+  > g {
+    > path {
+      fill: blue;
+    }
+  }
+}
+
+.logo-red {
+  > g {
+    > path {
+      fill: #EF5B57;
+    }
+  }
+}
+
+.logo-hover-red:hover {
+  > g {
+    > path {
+      fill: #E8103F;
+    }
+  }
+}
+
+.logo-hover-yellow:hover {
+  > g {
+    > path {
+      fill: yellow;
+    }
+  }
+}

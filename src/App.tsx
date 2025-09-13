@@ -1,12 +1,12 @@
-import HeroSection from './components/hero-section/hero-section';
-import MainSection from './components/all-schools-section/all-schools';
-import './App.scss'
-import SectionSeparator from './shared/components/section-separator/section-separator';
-import SchoolInfos from './components/school-infos-section/school-infos';
-import ContactMainSection from './components/contact-section/contact';
+import HeroSection from "./components/hero-section/hero-section";
+import MainSection from "./components/all-schools-section/all-schools";
+import "./App.scss";
+import SectionSeparator from "./shared/components/section-separator/section-separator";
+import SchoolInfos from "./components/school-infos-section/school-infos";
+import ContactMainSection from "./components/contact-section/contact";
+import Footer from "./components/footer/footer";
 
 function App() {
-
   return (
     <>
       <HeroSection />
@@ -16,8 +16,10 @@ function App() {
       <SchoolInfos />
       <SectionSeparator />
       <ContactMainSection />
-          </>
-  )
+      <SectionSeparator />
+      <Footer />
+    </>
+  );
 }
 
-export default App
+export default App;

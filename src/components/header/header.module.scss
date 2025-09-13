@@ -1,4 +1,4 @@
-@use "../../../shared/styles/mixins" as mixins;
+@use "../../shared/styles/mixins" as mixins;
 
 .main-content {
   display: flex;
@@ -15,13 +15,13 @@
   border: solid 2px black;
 
   @media (min-width: 1281px) {
-    background-image: url("../../../assets/images/header/background-3176447_1920.jpg");
+    background-image: url("../../assets/images/header/background-3176447_1920.jpg");
   }
   @media (max-width: 1280px) {
-    background-image: url("../../../assets/images/header/background-3176447_1280.jpg");
+    background-image: url("../../assets/images/header/background-3176447_1280.jpg");
   }
   @media (max-width: 640px) {
-    background-image: url("../../../assets/images/header/background-3176447_640.jpg");
+    background-image: url("../../assets/images/header/background-3176447_640.jpg");
   }
 
   > div {
@@ -40,7 +40,6 @@
          border: solid 1px #174626;
          
         &:hover {
-         //  color: #174626;
           background-color: #90025742;
           border: solid 1px #900257;
         }
