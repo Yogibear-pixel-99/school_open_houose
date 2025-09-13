@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <>
       <section className={`${styles["main-content"]} pad-main-header`}>
-        <div className={`${styles["left"]}`}>
+        <div className={`${styles["left"]} footer-contact-txt-font`}>
           <span>Joachim Pürcher</span>
           <br />
           <span>contact@puercherjoachim.com</span>
@@ -29,7 +29,7 @@ export default function Footer() {
             <a href="#">Datenschutz</a>
           </nav>
         </div>
-        <div className={`${styles["right"]} footer-contact-txt-font`}>
+        <div className={`${styles["right"]}`}>
           <img
             src="../src/assets/images/footer/kids-160168_1280.png"
             alt="kids logo"
