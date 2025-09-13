@@ -6,7 +6,7 @@ export default function MainSection() {
 
 
   return (
-    <section className={`${styles["section"]} pad-main`}>
+    <section id="allSchools" className={`${styles["section"]} pad-main`}>
     <h2 className={`${styles["header"]} sub-header-font`}>Weiterführende Schulen</h2>
       <div className={`${styles["school-wrapper"]} `}>
         {allSchools.map((school, index) => {

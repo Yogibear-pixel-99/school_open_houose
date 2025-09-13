@@ -10,7 +10,7 @@ export default function Footer() {
           <br />
           <span>contact@puercherjoachim.com</span>
           <br />
-          <span>Web- Anwendungentwickler</span>
+          <span>Webentwickler</span>
           <br />
           <div>
             <img
@@ -23,7 +23,7 @@ export default function Footer() {
           <div>
             <MyLogo clrClass="logo-red" hvrColor="logo-hover-red" />
           </div>
-          <nav>
+          <nav className="small-txt-font">
             <a href="#">Impressum</a>
             <span> | </span>
             <a href="#">Datenschutz</a>

@@ -22,9 +22,9 @@ export default function SingleSchool({
         <span className={`main-txt-font`}>{address}</span>
       </div>
       <div>
-        <span className={`school-box-header-font`}>Homepage - </span>
+        <span className={`school-box-header-font`}>Mehr Infos: </span>
         <a className={`main-txt-font`} href={hrefPath} target="_blank">
-          {hrefPath}
+          zur Homepage
         </a>
       </div>
       <div>

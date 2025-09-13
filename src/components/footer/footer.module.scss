@@ -1,11 +1,10 @@
 @use "../../shared/styles/mixins" as mixins;
 
 .main-content {
-    @include mixins.flexspbtw();
+  @include mixins.flexspbtw();
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
-  border: solid 2px black;
 
   @media (min-width: 1281px) {
     background-image: url("../../assets/images/header/background-3176447_1920.jpg");
@@ -19,33 +18,40 @@
 }
 
 .right {
-    width: 140px;
+  width: 140px;
 
-    > img {
-        width: 100%;
-        height: auto;
-    }
+  > img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .middle {
-    text-align: center;
-    @include mixins.flexspbtw(center, center);
-    flex-direction: column;
+  text-align: center;
+  @include mixins.flexspbtw(center, center);
+  flex-direction: column;
 
-    > div {
-        width: 60px;
-        height: auto;
-    }
+  > div {
+    width: 60px;
+    height: auto;
+  }
+
+  > nav {
+    font-weight: 450;
+  }
 }
 
 .left {
-width: 250px;
+  width: 250px;
 
-> div {
+  > span:nth-child(1) {
+    font-weight: 600;
+  }
 
+  > div {
     > img {
-        width: 100%;
-        height: auto;
+      width: 100%;
+      height: auto;
     }
-}
+  }
 }

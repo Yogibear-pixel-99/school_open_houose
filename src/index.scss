@@ -1,11 +1,13 @@
 * {
   box-sizing: border-box;
+  cursor: default;
 }
 
 html, body {
   margin: 0;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  scroll-behavior: smooth;
 }
 
 html::-webkit-scrollbar {
@@ -23,6 +25,10 @@ h1, h2, h3, h4, h5, h6 {
 a {
   text-decoration: none;
   color: black;
+}
+
+a:hover {
+  cursor: pointer;
 }
 
 input {

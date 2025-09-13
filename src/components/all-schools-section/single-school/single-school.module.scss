@@ -17,7 +17,8 @@
   &:hover {
     filter: brightness(1.1);
     scale: 1.05;
-    border: solid 2px #B0E3F6;
+    border: solid 1px #B0E3F6;
+    cursor: default;
 
   
     > div {

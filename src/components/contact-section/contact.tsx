@@ -4,7 +4,7 @@ import RightContactContent from "./right-content/right-content";
 
 export default function ContactMainSection() {
   return (
-    <section className={`${styles["main-content"]}`}>
+    <section id="contactForm" className={`${styles["main-content"]}`}>
       <div className={`${styles['wrapper-left']} pad-main`}>
         <LeftContactContent />
       </div>

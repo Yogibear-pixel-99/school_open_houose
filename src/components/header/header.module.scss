@@ -12,7 +12,7 @@
   background-size: cover;
   height: 140px;
   max-height: 100%;
-  border: solid 2px black;
+  // border: solid 2px black;
 
   @media (min-width: 1281px) {
     background-image: url("../../assets/images/header/background-3176447_1920.jpg");
@@ -25,23 +25,26 @@
   }
 
   > div {
-    @include mixins.flexspbtw();
-    gap: 64px;
+    @include mixins.flexspbtw(space-between, flex-start);
+    flex-direction: column;
+    gap: 8px;
 
     > nav {
       @include mixins.flexspbtw();
       gap: 24px;
       align-self: end;
-      
 
       > a {
-         padding: 4px 8px;
-         border-radius: 12px;
-         border: solid 1px #174626;
-         
+        padding: 4px 8px;
+        border-radius: 12px;
+
         &:hover {
-          background-color: #90025742;
-          border: solid 1px #900257;
+          color: #900257;
+          box-shadow: 0 0 10px rgba(117, 48, 83, 0.8),
+            0 0 5px rgba(110, 44, 77, 0.6), 0 0 10px rgba(255, 105, 180, 0.4),
+            0 0 20px rgba(255, 105, 180, 0.2);
+
+
         }
       }
     }
