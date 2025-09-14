@@ -1,18 +1,7 @@
 import styles from "./single-school.module.scss";
+import type { School } from "../schools";
 
-type SchoolInfo = {
-  name: string;
-  address: string;
-  hrefPath: string;
-  dayOfOpen: string;
-};
-
-export default function SingleSchool({
-  name,
-  address,
-  hrefPath,
-  dayOfOpen,
-}: SchoolInfo) {
+export default function SingleSchool({name, address, hrefPath, dayOfOpen}: School) {
   return (
     <section
       className={`${styles["main-content"]} border-txt-box std-glas-effect-shadow pad-txt-box`}>

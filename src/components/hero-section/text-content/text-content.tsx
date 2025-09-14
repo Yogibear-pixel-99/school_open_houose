@@ -16,10 +16,9 @@ export default function HeroText() {
         <li>Muss ich mein Kind dazu anmelden?</li>
       </ul>
       <p className="main-txt-font">
-        Ich habe die gängigsten Schulen aufgelistet, um etwas den Überblick zu
-        behalten. Falls eine Schule fehlt, schickt mir bitte eine E-Mail über
-        den Kontaktbereich oder fügt sie selbst im Bereich „Schulen“ hinzu.
-        Dafür benötigt ihr den Code, den ich geteilt habe.
+        Gleich unterhalb habe ich alle Schulen aufgelistet, die in Frage kommen.
+        Bitte schickt mir von Schulen die noch fehlen eine EMail, damit ich sie
+        hinzufügen kann. Danke!
       </p>
     </div>
   );

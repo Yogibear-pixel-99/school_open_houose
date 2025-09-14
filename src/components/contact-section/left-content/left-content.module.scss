@@ -1,0 +1,15 @@
+@use "../../../shared/styles/mixins" as mixins;
+
+
+.main-content {
+    @include mixins.flexspbtw();
+}
+
+.img-wrapper {
+      height: 300px;
+
+            > img {
+            height: 100%;
+            width: auto;
+        }
+}

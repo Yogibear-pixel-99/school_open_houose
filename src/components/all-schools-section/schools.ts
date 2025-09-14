@@ -1,4 +1,14 @@
-  export const allSchools = [
+  
+  export type School = {
+    name: string,
+    address: string,
+    hrefPath: string,
+    dayOfOpen: string
+  }
+  
+  export type SchoolsData = School[];
+
+  export const allSchools: SchoolsData = [
     {
     name: "Musik Mittelschule Leonding",
     address: "Ruflingerstraße 14, 4060 Leonding",
@@ -37,8 +47,21 @@
     },
         {
     name: "Sportschule Eferding Süd",
-    address: "Welser Straße 19",
+    address: "Welser Straße 19, 4070 Eferding",
     hrefPath: "https://www.xn--sms-sd-7ya.at/",
     dayOfOpen: "Noch kein Termin"
+    },
+        {
+    name: "Private pädagogische Hochschule der Diozöse Linz",
+    address: "Salesianumweg 5, 4020 Linz",
+    hrefPath: "https://www.stifterschule.at/",
+    dayOfOpen: "Kein Termin gefunden"
     }
+    //     {
+    // name: "",
+    // address: "",
+    // hrefPath: "",
+    // dayOfOpen: ""
+    // },
 ];
+
