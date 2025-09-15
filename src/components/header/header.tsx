@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <section className={`${styles["main-content"]} pad-main-header`}>
       <div>
-        <h1 className="sub-header-font">Tag der offenen Tür</h1>
+        <h1 className="sub-header-font">Tag der offenen Tür - Für die Schüler der 4. Klassen der Volksschule Schönering.</h1>
         <nav className="link-font">
           <a href="#allSchools">Zu den Schulen</a>
           <a href="#contactForm">Infos ergänzen</a>

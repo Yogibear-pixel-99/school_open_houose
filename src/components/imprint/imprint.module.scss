@@ -1,0 +1,37 @@
+@use "./../../shared/styles/mixins" as mixins;
+
+.main-content {
+  background-image: url("../../assets/images/school-infos/note_bg_1920.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include mixins.flexspbtw();
+  flex-direction: column;
+
+  > div {
+    flex: 1;
+
+    > h2 {
+      margin-top: 32px;
+    }
+
+    > a {
+      color: #e8103f;
+      font-weight: 600;
+
+      &:hover {
+        color: #e97100;
+      }
+    }
+
+    > p {
+      > a {
+        color: #e8103f;
+        font-weight: 600;
+
+        &:hover {
+          color: #e97100;
+        }
+      }
+    }
+  }
+}

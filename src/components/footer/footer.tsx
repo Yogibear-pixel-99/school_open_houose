@@ -1,5 +1,6 @@
 import MyLogo from "../../shared/components/my-logo/my-logo";
 import styles from "./footer.module.scss";
+import {Link} from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -24,7 +25,7 @@ export default function Footer() {
             <MyLogo clrClass="logo-red" hvrColor="logo-hover-red" />
           </div>
           <nav className="small-txt-font">
-            <a href="#">Impressum</a>
+            <Link to="/imprint">Impressum</Link>
             <span> | </span>
             <a href="#">Datenschutz</a>
           </nav>
