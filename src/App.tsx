@@ -4,6 +4,7 @@ import { MainPage } from "./components/routes";
 import Footer from "./components/footer/footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToElement from "./shared/components/logic/ScrollToElement";
+import PrivacyPolicy from "./components/privacy-policy/privacy-policy";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/imprint" element={<Imprint />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
       </Routes>
       <Footer />
     </BrowserRouter>

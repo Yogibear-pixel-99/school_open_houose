@@ -27,7 +27,7 @@ export default function Footer() {
           <nav className="small-txt-font">
             <Link to="/imprint">Impressum</Link>
             <span> | </span>
-            <a href="#">Datenschutz</a>
+            <Link to="/privacy">Datenschutz</Link>
           </nav>
         </div>
         <div className={`${styles["right"]}`}>

@@ -12,7 +12,8 @@ export default function Imprint() {
 
         <p className="main-txt-font">Joachim Pürcher<br></br> Schöneringer Straße 12e<br></br> 4073 Wilhering</p>
 
-        <p className="main-txt-font">Tel.: +43 676 770 41 99<br></br> E-Mail:<a className="main-txt-font"> contact@PuercherJoachim.com</a></p>
+        <p className="main-txt-font">Tel.: <a href="tel:00436767704199">+43 676 770 41 99</a><br></br>
+        E-Mail:<a className="main-txt-font" href="mail:contact@PuercherJoachim.com"> contact@PuercherJoachim.com</a></p>
 
         <h2 className="sub-header-font-small">Haftung für den Inhalte dieser Seite</h2>
 
