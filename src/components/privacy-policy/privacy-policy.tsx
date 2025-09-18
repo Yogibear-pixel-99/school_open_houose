@@ -1,12 +1,13 @@
 import styles from "./privacy-policy.module.scss";
 import Header from "../header/header";
+import {Link} from "react-router-dom";
 
 export default function PrivacyPolicy() {
   return (
     <section className={`${styles["main-content"]}`}>
       <Header />
       <div className="pad-main">
-        <>
+    
           <h2 className="sub-header-font">Erklärung zur Informationspflicht</h2>
 
           <h2 className="sub-header-font-small">Datenschutzerklärung</h2>
@@ -121,7 +122,8 @@ export default function PrivacyPolicy() {
           <p className="main-txt-font">
             Quelle Datenschutzgenerator Österreich DSGVO
           </p>
-        </>
+           <Link className={`${styles["back-link"]} link-font`} to="/">Zurück</Link>
+        
       </div>
     </section>
   );

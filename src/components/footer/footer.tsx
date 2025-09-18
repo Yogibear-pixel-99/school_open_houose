@@ -21,13 +21,13 @@ export default function Footer() {
           </div>
         </div>
         <div className={`${styles["middle"]}`}>
-          <div>
+          <a className={`${styles["logo-wrapper"]}`} href="https://www.puercherjoachim.com" target="_blank">
             <MyLogo clrClass="logo-red" hvrColor="logo-hover-red" />
-          </div>
-          <nav className="small-txt-font">
-            <Link to="/imprint">Impressum</Link>
+          </a>
+          <nav>
+            <Link className={`${styles['footer-link']} small-txt-font`} to="/imprint">Impressum</Link>
             <span> | </span>
-            <Link to="/privacy">Datenschutz</Link>
+            <Link className={`${styles['footer-link']} small-txt-font`} to="/privacy">Datenschutz</Link>
           </nav>
         </div>
         <div className={`${styles["right"]}`}>

@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  cursor: default;
+  // cursor: default;
 }
 
 html, body {
@@ -40,4 +40,9 @@ button {
   border: none;
   padding: 12px 24px;
   outline: none;
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(1.05);
+  }
 }
