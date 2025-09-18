@@ -15,7 +15,7 @@ export default function Footer() {
           <br />
           <div>
             <img
-              src="../src/assets/images/footer/pencil-underline_640_small.png"
+              src="./src/assets/images/footer/pencil-underline_640_small.png"
               alt="Bleistift"
             />
           </div>
@@ -32,7 +32,7 @@ export default function Footer() {
         </div>
         <div className={`${styles["right"]}`}>
           <img
-            src="../src/assets/images/footer/kids-160168_1280.png"
+            src="./src/assets/images/footer/kids-160168_1280.png"
             alt="kids logo"
           />
         </div>

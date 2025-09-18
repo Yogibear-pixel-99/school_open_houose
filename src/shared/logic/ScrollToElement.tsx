@@ -1,9 +1,8 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-
 const ScrollToElement = () => {
-      const location = useLocation();
+  const location = useLocation();
 
   useEffect(() => {
     if (location.hash) {
@@ -11,11 +10,12 @@ const ScrollToElement = () => {
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
       }
+    } else {
+      window.scrollTo({ behavior: "smooth", top: 0 });
     }
   }, [location]);
 
   return null;
-
-}
+};
 
 export default ScrollToElement;

@@ -9,7 +9,7 @@ export default function PrivacyPolicy() {
         <>
           <h2 className="sub-header-font">Erklärung zur Informationspflicht</h2>
 
-          <h2 className="sub-header-font">Datenschutzerklärung</h2>
+          <h2 className="sub-header-font-small">Datenschutzerklärung</h2>
 
           <p className="main-txt-font">
             In folgender Datenschutzerklärung informieren wir Sie über die
@@ -26,7 +26,7 @@ export default function PrivacyPolicy() {
             berechtigtes Interesse iSv Art 6 Abs 1 lit f DSGVO.
           </p>
 
-          <h2 className="sub-header-font">Kontakt mit uns</h2>
+          <h2 className="sub-header-font-small">Kontakt mit uns</h2>
 
           <p className="main-txt-font">
             Wenn Sie uns, entweder über unser Kontaktformular auf unserer
@@ -37,7 +37,7 @@ export default function PrivacyPolicy() {
             Ihrer übermittelten Daten.
           </p>
 
-          <h2 className="sub-header-font">Cookies</h2>
+          <h2 className="sub-header-font-small">Cookies</h2>
 
           <p className="main-txt-font">
             Unsere Website verwendet so genannte Cookies. Dabei handelt es sich
@@ -53,7 +53,7 @@ export default function PrivacyPolicy() {
             eingeschränkt sein.
           </p>
 
-          <h2 className="sub-header-font">Server Log Files</h2>
+          <h2 className="sub-header-font-small">Server Log Files</h2>
 
           <p className="main-txt-font">
             Diese Webseite und der damit verbundene Provider erhebt im Zuge der
@@ -83,7 +83,7 @@ export default function PrivacyPolicy() {
             oder zu überprüfen.
           </p>
 
-          <h2 className="sub-header-font">Ihre Rechte als Betroffener</h2>
+          <h2 className="sub-header-font-small">Ihre Rechte als Betroffener</h2>
 
           <p className="main-txt-font">
             Sie als Betroffener haben bezüglich Ihrer Daten, welche bei uns

@@ -1,4 +1,5 @@
 import styles from "./header.module.scss";
+import {Link} from "react-router-dom";
 
 export default function Header() {
   return (
@@ -6,9 +7,12 @@ export default function Header() {
       <div>
         <h1 className="sub-header-font">Tag der offenen Tür - Für die Schüler der 4. Klassen der Volksschule Schönering.</h1>
         <nav className="link-font">
-          <a href="#allSchools">Zu den Schulen</a>
+          <Link to="/#allSchools">Zu den Schulen</Link>
+          <Link to="/#contactForm">Infos ergänzen</Link>
+          <Link to="/#schoolInfos">Schulinfos für 2025/26</Link>
+          {/* <a href="#allSchools">Zu den Schulen</a>
           <a href="#contactForm">Infos ergänzen</a>
-          <a href="#schoolInfos">Schulinfos für 2025/26</a>
+          <a href="#schoolInfos">Schulinfos für 2025/26</a> */}
         </nav>
       </div>
 
