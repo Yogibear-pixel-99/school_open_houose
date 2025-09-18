@@ -10,7 +10,7 @@ import PrivacyPolicy from "./components/privacy-policy/privacy-policy";
 function App() {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/schoolinfos">
     <ScrollToElement />
       <Routes>
         <Route path="/" element={<MainPage />} />
@@ -23,3 +23,4 @@ function App() {
 }
 
 export default App;
+

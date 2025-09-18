@@ -1,4 +1,5 @@
 import styles from "./left-content.module.scss";
+import childAndBooks from "../../../assets/images/contact-infos/girl-160172_640.png";
 
 export default function LeftContactContent() {
   return (
@@ -24,7 +25,7 @@ export default function LeftContactContent() {
         
       </div>
       <div className={styles['img-wrapper']}>
-        <img src="src/assets/images/contact-infos/girl-160172_640.png" alt="Schulkind" />
+        <img src={childAndBooks} alt="Schulkind" />
       </div>
     </section>
   );

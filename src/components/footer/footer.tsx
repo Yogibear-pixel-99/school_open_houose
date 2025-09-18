@@ -1,6 +1,8 @@
 import MyLogo from "../../shared/components/my-logo/my-logo";
 import styles from "./footer.module.scss";
 import {Link} from "react-router-dom";
+import pencil from "../../assets/images/footer/pencil-underline_640_small.png";
+import kidsLogo from "../../assets/images/footer/kids-160168_1280.png";
 
 export default function Footer() {
   return (
@@ -15,7 +17,7 @@ export default function Footer() {
           <br />
           <div>
             <img
-              src="./src/assets/images/footer/pencil-underline_640_small.png"
+              src={pencil}
               alt="Bleistift"
             />
           </div>
@@ -32,7 +34,7 @@ export default function Footer() {
         </div>
         <div className={`${styles["right"]}`}>
           <img
-            src="./src/assets/images/footer/kids-160168_1280.png"
+            src={kidsLogo}
             alt="kids logo"
           />
         </div>

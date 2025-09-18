@@ -1,5 +1,6 @@
 import styles from "./header.module.scss";
 import {Link} from "react-router-dom";
+import busLogo from "../../assets/images/header/school-bus-296824.svg";
 
 export default function Header() {
   return (
@@ -19,7 +20,7 @@ export default function Header() {
       <div>
         <div className={styles["img-wrapper"]}>
           <img
-            src="src/assets/images/header/school-bus-296824.svg"
+            src={busLogo}
             alt="Schulbus"
           />
         </div>
