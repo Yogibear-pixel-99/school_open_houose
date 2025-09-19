@@ -5,65 +5,111 @@
   font-size: 58px;
   font-weight: 600;
   letter-spacing: 1.5px;
+
+  @media (max-width: 800px) {
+      font-size: 42px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  }
 }
 
 .sub-header-font {
   font-family: patrickHand, sans-serif, "Times New Roman", Times, serif;
   font-size: 48px;
   font-weight: 600;
+
+    @media (max-width: 800px) {
+    font-size: 36px;
+  }
 }
 
 .sub-header-font-small {
   font-family: patrickHand, sans-serif, "Times New Roman", Times, serif;
   font-size: 32px;
   font-weight: 600;
+
+    @media (max-width: 800px) {
+     font-size: 24px;
+  }
 }
 .school-box-header-font {
   font-family: patrickHand, sans-serif, "Times New Roman", Times, serif;
   font-size: 24px;
   font-weight: 500;
+
+    @media (max-width: 800px) {
+    font-size: 20px;
+  }
 }
 
 .main-txt-font {
   font-family: comicNew, sans-serif, "Times New Roman", Times, serif;
   font-size: 20px;
   font-weight: 400;
+
+    @media (max-width: 800px) {
+    font-size: 18px;
+  }
 }
 
 .small-txt-font {
   font-family: fredoka, sans-serif, "Times New Roman", Times, serif;
   font-size: 16px;
   font-weight: 600;
+
+    @media (max-width: 800px) {
+    font-size: 14px;
+  }
 }
 
 .input-label-font {
   font-family: fredoka, sans-serif, "Times New Roman", Times, serif;
   font-size: 18px;
   font-weight: 600;
+
+    @media (max-width: 800px) {
+    font-size: 16px;
+  }
 }
 
 .input-placeholder-font {
       font-family: fredoka, sans-serif, "Times New Roman", Times, serif;
   font-size: 16px;
   font-weight: 400;
+
+    @media (max-width: 800px) {
+    font-size: 14px;
+  }
 }
 
 .button-std-font {
       font-family: comicNew, sans-serif, "Times New Roman", Times, serif;
   font-size: 20px;
   font-weight: 700;
+
+    @media (max-width: 800px) {
+    font-size: 18px;
+  }
 }
 
 .footer-contact-txt-font {
     font-family: fredoka, sans-serif, "Times New Roman", Times, serif;
   font-size: 18px;
   font-weight: 400;
+
+    @media (max-width: 800px) {
+    font-size: 16px;
+  }
 }
 
 .link-font {
       font-family: fredoka, sans-serif, "Times New Roman", Times, serif;
   font-size: 18px;
   font-weight: 400;
+
+    @media (max-width: 800px) {
+    font-size: 16px;
+  }
 }
 
 .input-error-font {
@@ -71,4 +117,8 @@
   font-size: 14px;
   font-weight: 500;
   color: rgba(0, 0, 0, 0);
+
+    @media (max-width: 800px) {
+    font-size: 12px;
+  }
 }

@@ -27,18 +27,28 @@
   @media (max-width: 640px) {
     background-image: url("../../assets/images/header/background-3176447_640.jpg");
   }
+  // @media (max-width: 520px) {
+  //   height: auto;
+  // }
 
   > div {
-    @include mixins.flexspbtw(space-between, flex-start);
-    // flex-direction: column;
+    @include mixins.flexspbtw(space-between, center);
     gap: 8px;
+    width: 100%;
   }
   > nav {
 
     margin-left: auto;
+
+    @media (max-width: 800px) {
+      margin: 0;
+      @include mixins.flexspbtw();
+      width: 100%;
+    }
     > a {
       padding: 4px 8px;
       border-radius: 12px;
+      margin-left: 24px;
 
       &:hover {
         color: #900257;
@@ -46,14 +56,21 @@
           0 0 5px rgba(110, 44, 77, 0.6), 0 0 10px rgba(255, 105, 180, 0.4),
           0 0 20px rgba(255, 105, 180, 0.2);
       }
+
+      @media (max-width: 800px) {
+        margin-left: 0;
+      }
     }
   }
 }
 
 .img-wrapper {
-  height: 95px;
-  width: 140px;
-  @include mixins.flexspbtw(center, center);
+  height: auto;
+  width: 100px;
+  min-width: 100px;
+  max-width: 100px;
+  @include mixins.flexspbtw(center, start);
+  margin: 12px 0 auto;
 
   > img {
     width: 100%;
