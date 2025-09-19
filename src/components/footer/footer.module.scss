@@ -15,6 +15,16 @@
   @media (max-width: 640px) {
     background-image: url("../../assets/images/header/background-3176447_640.jpg");
   }
+
+  > div {
+    > span {
+        > a {
+            &:hover {
+                color:#e8103f;
+            }
+        }
+    }
+  }
 }
 
 .right {
