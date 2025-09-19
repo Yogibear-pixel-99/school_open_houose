@@ -1,18 +1,22 @@
 @use "../../shared/styles/mixins" as mixins;
 
 .main-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 48px;
+  @include mixins.flexspbtw(space-between, center);
+  flex-direction: column;
+
   position: relative;
   background-color: rgba(0, 0, 0, 0.144);
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
-  height: 140px;
+  height: 192px;
   max-height: 100%;
   width: 100dvw;
+  max-width: 1920px;
+
+  // @media (max-width: 800px) {
+  //   flex-direction: column;
+  // }
 
   @media (min-width: 1281px) {
     background-image: url("../../assets/images/header/background-3176447_1920.jpg");
@@ -26,26 +30,21 @@
 
   > div {
     @include mixins.flexspbtw(space-between, flex-start);
-    flex-direction: column;
+    // flex-direction: column;
     gap: 8px;
+  }
+  > nav {
 
-    > nav {
-      @include mixins.flexspbtw();
-      gap: 24px;
-      align-self: start;
+    margin-left: auto;
+    > a {
+      padding: 4px 8px;
+      border-radius: 12px;
 
-      > a {
-        padding: 4px 8px;
-        border-radius: 12px;
-
-        &:hover {
-          color: #900257;
-          box-shadow: 0 0 10px rgba(117, 48, 83, 0.8),
-            0 0 5px rgba(110, 44, 77, 0.6), 0 0 10px rgba(255, 105, 180, 0.4),
-            0 0 20px rgba(255, 105, 180, 0.2);
-
-
-        }
+      &:hover {
+        color: #900257;
+        box-shadow: 0 0 10px rgba(117, 48, 83, 0.8),
+          0 0 5px rgba(110, 44, 77, 0.6), 0 0 10px rgba(255, 105, 180, 0.4),
+          0 0 20px rgba(255, 105, 180, 0.2);
       }
     }
   }

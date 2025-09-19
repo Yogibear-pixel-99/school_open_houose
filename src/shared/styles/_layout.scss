@@ -4,6 +4,10 @@
 
 .pad-main-header {
   padding: 12px 48px;
+
+  @media (max-width: 800px) {
+    padding: 8px 12px;
+  }
 }
 
 .pad-main-footer {

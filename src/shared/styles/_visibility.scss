@@ -1,0 +1,34 @@
+.hide-max-800 {
+    @media (max-width: 800px) {
+        display: none;
+    }
+}
+
+.hide-max-1000 {
+  @media (max-width: 1000px) {
+    display: none;
+  }
+}
+
+.show-max-1000-block {
+  display: none;
+
+  @media (max-width: 1000px) {
+    display: block;
+  }
+}
+
+.show-max-1000-flex {
+  display: none;
+
+  @media (max-width: 1000px) {
+    display: flex;
+  }
+}
+
+.show-max-800-block {
+    display: none;
+    @media (max-width: 800px) {
+        display: block;
+    }
+}
