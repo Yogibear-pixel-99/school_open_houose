@@ -20,8 +20,8 @@ export default function Header() {
       
      <nav className="link-font">
         <Link to="/#allSchools">Zu den Schulen</Link>
-        <Link to="/#contactForm">Infos ergänzen</Link>
         <Link to="/#schoolInfos">Schulinfos für 2025/26</Link>
+        <Link to="/#contactForm">Infos ergänzen</Link>
       </nav>
     </section>
   );

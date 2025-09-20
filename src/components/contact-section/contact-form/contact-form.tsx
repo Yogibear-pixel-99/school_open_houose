@@ -60,16 +60,16 @@ export default function ContactForm() {
     });
 
   const changeNameValue = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setContactData({ ...contactData, name: event.target.value.trim() });
+    setContactData({ ...contactData, name: event.target.value });
   };
   const changeEmailValue = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setContactData({ ...contactData, email: event.target.value.trim() });
+    setContactData({ ...contactData, email: event.target.value });
   };
   const changeSchoolValue = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setContactData({ ...contactData, school: event.target.value.trim() });
+    setContactData({ ...contactData, school: event.target.value });
   };
   const changeQuestionValue = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setContactData({ ...contactData, message: event.target.value.trim() });
+    setContactData({ ...contactData, message: event.target.value });
   };
   const changePrivacyValue = (event: React.ChangeEvent<HTMLInputElement>) => {
     setContactData({ ...contactData, privacy: event.target.checked });
@@ -90,7 +90,6 @@ export default function ContactForm() {
   }
 
   function validInputs() {
-    debugger;
     checkInputError(/^[a-zA-ZäöüÄÖÜß0-9 ]*$/, contactData.name, "errorName");
     checkInputError(
       /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
