@@ -1,0 +1,74 @@
+export const appointments = [
+    {id: 1,
+        from: "27.10.2025",
+        to: "31.10.2025",
+        days: "Montag bis einschl. Freitag",
+        justification: "Herbstferien"
+    },
+    {id: 2,
+        from: "08.12.2025",
+        to: "08.12.2025",
+        days: "Montag",
+        justification: "Mariä Empfängnis"
+    },
+    {id: 3,
+        from: "24.12.2025",
+        to: "06.01.2026",
+        days: "Mittwoch bis einschl. Dienstag",
+        justification: "Weihnachtsferien"
+    },
+    {id: 4,
+        from: "16.02.2026",
+        to: "20.02.2026",
+        days: "Montag bis einschl. Freitag",
+        justification: "Semesterferien"
+    },
+    {id: 5,
+        from: "30.03.2026",
+        to: "06.04.2026",
+        days: "Montag bis einschl. Montag",
+        justification: "Osterferien"
+    },
+    {id: 6,
+        from: "01.05.2026",
+        to: "01.05.2026",
+        days: "Freitag",
+        justification: "Staatsfeiertag"
+    },
+    {id: 7,
+        from: "04.05.2026",
+        to: "04.05.2026",
+        days: "Montag",
+        justification: "Hl. Florian"
+    },
+    {id: 8,
+        from: "14.05.2026",
+        to: "14.05.2026",
+        days: "Donnerstag",
+        justification: "Christi Himmelfahrt"
+    },
+    {id: 9,
+        from: "25.05.2026",
+        to: "25.05.2026",
+        days: "Montag",
+        justification: "Pfingsten"
+    },
+    {id: 10,
+        from: "04.06.2026",
+        to: "04.06.2026",
+        days: "Donnerstag",
+        justification: "Fronleichnam"
+    },
+    {id: 11,
+        from: "05.06.2026",
+        to: "05.06.2026",
+        days: "Freitag",
+        justification: "schulautonomer freier Tag"
+    },
+    {id: 12,
+        from: "13.07.2026",
+        to: "11.09.2026",
+        days: "Montag bis einschl. Freitag",
+        justification: "Sommerferien"
+    }
+];

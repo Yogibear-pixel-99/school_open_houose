@@ -1,9 +1,50 @@
+@use "./../../shared/styles/mixins" as mixins;
+
 .main-content {
-    background-image: url('../../assets/images/school-infos/note_bg_1920.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url("../../assets/images/school-infos/note_bg_1920.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  > h1 {
+    text-align: center;
+  }
+
+  > div {
+    > p {
+      @include mixins.flexspbtw();
+      @media (max-width: 850px) {
+        display: block;
+      }
+      @media (max-width: 440px) {
+        display: flex;
+        flex-direction: column;
+      }
+
+      > div {
+        @include mixins.flexspbtw();
+        gap: 24px;
+        @media (max-width: 440px) {
+        //   width: 100%;
+          flex-direction: column;
+          gap: 4px;
+          margin-top: 12px;
+          align-items: center;
+        }
+
+        > div {
+          @include mixins.flexspbtw();
+          width: 224px;
+
+          @media (max-width: 520px) {
+            width: 185px;
+            align-self: flex-end;
+          }
+        }
+      }
+    }
+  }
 }
 
 .header {
-    color: red;
+  color: red;
 }
