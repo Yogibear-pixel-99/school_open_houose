@@ -13,3 +13,10 @@
     color: #EF5B57;
   }
 }
+
+.no-hover {
+  &:hover {
+    box-shadow: none;
+    color: default;
+  }
+}

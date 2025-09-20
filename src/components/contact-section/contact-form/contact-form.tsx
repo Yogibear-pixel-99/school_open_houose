@@ -1,5 +1,6 @@
 import styles from "./contact-form.module.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function ContactForm() {
   type ContactForm = {
@@ -18,11 +19,20 @@ export default function ContactForm() {
     privacyNotChecked: string;
   };
 
-  const [errors, setErrors] = useState({
+  type InputErrors = {
+    name: boolean;
+    email: boolean;
+    message: boolean;
+    privacy: boolean;
+    school: boolean;
+  };
+
+  const [errors, setErrors] = useState<InputErrors>({
     name: false,
     email: false,
     message: false,
     privacy: false,
+    school: false,
   });
 
   let checkErrors = {
@@ -39,6 +49,13 @@ export default function ContactForm() {
     message: "",
     privacy: false,
   });
+
+  useEffect(() => {
+    const savedContactData:string | null = sessionStorage.getItem("contactData");
+    if (savedContactData) {
+      setContactData(JSON.parse(savedContactData));
+    }
+  }, [])
 
   let formValid: boolean[] = [];
 
@@ -60,24 +77,37 @@ export default function ContactForm() {
     });
 
   const changeNameValue = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setContactData({ ...contactData, name: event.target.value });
+    const newData = { ...contactData, name: event.target.value };
+    setContactData(newData);
+    sessionStorage.setItem("contactData", JSON.stringify(newData));
   };
+
   const changeEmailValue = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setContactData({ ...contactData, email: event.target.value });
+    const newData = { ...contactData, email: event.target.value };
+    setContactData(newData);
+    sessionStorage.setItem("contactData", JSON.stringify(newData));
   };
+
   const changeSchoolValue = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setContactData({ ...contactData, school: event.target.value });
+    const newData = { ...contactData, school: event.target.value };
+    setContactData(newData);
+    sessionStorage.setItem("contactData", JSON.stringify(newData));
   };
+
   const changeQuestionValue = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setContactData({ ...contactData, message: event.target.value });
+    const newData = { ...contactData, message: event.target.value };
+    setContactData(newData);
+    sessionStorage.setItem("contactData", JSON.stringify(newData));
   };
+
   const changePrivacyValue = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setContactData({ ...contactData, privacy: event.target.checked });
+    const newData = { ...contactData, privacy: event.target.checked };
+    setContactData(newData);
+    sessionStorage.setItem("contactData", JSON.stringify(newData));
   };
 
   const handleSubmit = (event: any) => {
     event.preventDefault();
-
     checkIfEmpty();
 
     if (validInputs() && errorsTrue()) {
@@ -146,28 +176,25 @@ export default function ContactForm() {
   const checkIfEmpty = () => {
     const updatedPlaceholder = { ...contactDataPlaceholder };
     const updateErrorClasses = { ...errors };
-
-    if (contactData.name === "") {
-      updatedPlaceholder.nameEmpty = "Leider fehlt dein Name";
-      updateErrorClasses.name = true;
-    } else {
-      updateErrorClasses.name = false;
-    }
-
-    if (contactData.email === "") {
-      updatedPlaceholder.emailEmpty = "Ups, leider keine E-Mail Adresse";
-      updateErrorClasses.email = true;
-    } else {
-      updateErrorClasses.email = false;
-    }
-
-    if (contactData.message === "") {
-      updatedPlaceholder.messageEmpty = "Bitte schreib eine kurze Info";
-      updateErrorClasses.message = true;
-    } else {
-      updateErrorClasses.message = false;
-    }
-
+    const singleEmptyCheck = (
+      objKey: keyof ContactForm | keyof InputErrors,
+      objKeyEmpty: keyof ContactFormPlaceholder,
+      errorPlaceholderText: string
+    ) => {
+      if (contactData[objKey] === "") {
+        updatedPlaceholder[objKeyEmpty] = errorPlaceholderText;
+        updateErrorClasses[objKey] = true;
+      } else {
+        updateErrorClasses[objKey] = false;
+      }
+    };
+    singleEmptyCheck("name", "nameEmpty", "Leider fehlt dein Name");
+    singleEmptyCheck("email", "emailEmpty", "Ups, leider keine E-Mail Adresse");
+    singleEmptyCheck(
+      "message",
+      "messageEmpty",
+      "Bitte schreib eine kurze Info"
+    );
     if (contactData.privacy === false) {
       updatedPlaceholder.privacyNotChecked =
         "Bitte die Datenschutzerklärung akzeptieren";
@@ -218,24 +245,26 @@ export default function ContactForm() {
           type="text"
           id="fullname"
           name="fullname"
+          autoComplete="off"
           maxLength={20}
           placeholder={contactDataPlaceholder.nameEmpty}
           value={contactData.name}
           onChange={changeNameValue}
         />
         <span className={`input-error-font ${errorClasses.errorName}`}>
-          Kein gültiger Name
+          Nur Buchstaben oder Zahlen
         </span>
       </label>
       <label className="input-label-font" htmlFor="email">
         E-Mail Adresse
         <input
           className={`${
-            errors.name ? styles["error"] : ""
+            errors.email ? styles["error"] : ""
           } input-placeholder-font input-std-layout`}
           type="text"
           id="email"
           name="email"
+          autoComplete="off"
           maxLength={30}
           placeholder={contactDataPlaceholder.emailEmpty}
           value={contactData.email}
@@ -250,36 +279,38 @@ export default function ContactForm() {
         Zu ergänzende Schule
         <input
           className={`${
-            errors.name ? styles["error"] : ""
+            errors.school ? styles["error"] : ""
           } input-placeholder-font input-std-layout`}
           type="text"
           id="school"
           name="school"
+          autoComplete="off"
           maxLength={30}
           placeholder={contactDataPlaceholder.schoolEmpty}
           value={contactData.school}
           onChange={changeSchoolValue}
         />
         <span className={`input-error-font ${errorClasses.errorSchool}`}>
-          Nur Buchstaben und Zahlen
+          Keine Sonderzeichen erlaubt
         </span>
       </label>
       <label className="input-label-font" htmlFor="question">
         Andere Fragen oder Anregungen
         <input
           className={`${
-            errors.name ? styles["error"] : ""
+            errors.message ? styles["error"] : ""
           } input-placeholder-font input-std-layout`}
           type="text"
           name="question"
           id="question"
+          autoComplete="off"
           maxLength={200}
           placeholder={contactDataPlaceholder.messageEmpty}
           value={contactData.message}
           onChange={changeQuestionValue}
         />
         <span className={`input-error-font ${errorClasses.errorMessage}`}>
-          Keine Sonderzeichen
+          Keine Sonderzeichen erlaubt
         </span>
       </label>
       <div className={`${styles["checkbox-wrapper"]} input-label-font`}>
@@ -295,14 +326,18 @@ export default function ContactForm() {
           onChange={changePrivacyValue}
         />
         <span className={styles["custom-checkbox"]}>
-          Ich akzeptiere die <a href="#">Datenschutzerklärung</a>.
+          Ich akzeptiere die{" "}
+          <Link className={`${styles["privacy-link"]}`} to="/privacy">
+            Datenschutzerklärung
+          </Link>
+          .
         </span>
       </div>
       <span
         className={`input-error-font ${errorClasses.errorPrivacy} ${styles["privacy-error"]}`}>
         Akzeptiere die Datenschutzerklärung
       </span>
-      <button type="submit" className="button-std-font btn-std-layout">
+      <button type="submit" className={`button-std-font btn-std-layout`}>
         Abschicken
       </button>
     </form>
