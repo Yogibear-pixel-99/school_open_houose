@@ -2,6 +2,16 @@ import styles from "./contact-form.module.scss";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+/**
+ * ContactForm component provides a form for users to submit their contact information,
+ * including name, email, school to be added, message, and privacy consent.
+ *
+ * It validates inputs for correctness and emptiness, persists data in sessionStorage,
+ * and sends the data via POST to a backend endpoint.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered contact form element.
+ */
 export default function ContactForm() {
   type ContactForm = {
     name: string;
@@ -51,11 +61,12 @@ export default function ContactForm() {
   });
 
   useEffect(() => {
-    const savedContactData:string | null = sessionStorage.getItem("contactData");
+    const savedContactData: string | null =
+      sessionStorage.getItem("contactData");
     if (savedContactData) {
       setContactData(JSON.parse(savedContactData));
     }
-  }, [])
+  }, []);
 
   let formValid: boolean[] = [];
 
@@ -106,6 +117,10 @@ export default function ContactForm() {
     sessionStorage.setItem("contactData", JSON.stringify(newData));
   };
 
+  /**
+   * Handles form submission: validates inputs and sends data if valid.
+   * @param {React.FormEvent<HTMLFormElement>} event - The form submit event
+   */
   const handleSubmit = (event: any) => {
     event.preventDefault();
     checkIfEmpty();
@@ -115,10 +130,18 @@ export default function ContactForm() {
     }
   };
 
+  /**
+   * Checks if any validation errors exist
+   * @returns {boolean} True if no errors, false otherwise
+   */
   function errorsTrue() {
     return Object.values(checkErrors).every((value) => value === false);
   }
 
+  /**
+   * Validates inputs against regex patterns and privacy checkbox
+   * @returns {boolean} True if all inputs valid, false otherwise
+   */
   function validInputs() {
     checkInputError(/^[a-zA-ZäöüÄÖÜß0-9 ]*$/, contactData.name, "errorName");
     checkInputError(
@@ -141,6 +164,12 @@ export default function ContactForm() {
     return formValid.every((value) => value === true);
   }
 
+  /**
+   * Validates single input using regex, updates errorClasses and formValid accordingly.
+   * @param {RegExp} regex - The regex pattern to test against input value
+   * @param {string} srcPath - The input value to validate
+   * @param {keyof typeof errorClasses} errorClassName - The key for error class state to update
+   */
   function checkInputError(
     regex: RegExp,
     srcPath: string,
@@ -160,6 +189,7 @@ export default function ContactForm() {
     }
   }
 
+  /** Checks if privacy checkbox is checked and updates state */
   function checkPrivacyError() {
     const updateClasses = { ...errorClasses };
 
@@ -173,6 +203,9 @@ export default function ContactForm() {
     setErrorClasses(updateClasses);
   }
 
+  /**
+   * Checks if any required inputs are empty and sets placeholders and error states
+   */
   const checkIfEmpty = () => {
     const updatedPlaceholder = { ...contactDataPlaceholder };
     const updateErrorClasses = { ...errors };
@@ -211,6 +244,10 @@ export default function ContactForm() {
   const endPoint: string =
     "https://www.puercherjoachim.com/schoolinfos/sendMailSchool.php";
 
+  /**
+   * Sends the form data to the backend endpoint using fetch API.
+   * Logs success or error to the console.
+   */
   const sendData = async () => {
     try {
       const response = await fetch(endPoint, {

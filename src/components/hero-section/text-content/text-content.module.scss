@@ -4,14 +4,14 @@
   width: 40dvw;
   margin-left: auto;
 
-      @media (max-width: 1000px) {
-      width: 60dvw;
-    }
+  @media (max-width: 1000px) {
+    width: 60dvw;
+  }
 
-      @media (max-width: 500px) {
-      width: auto;
-      margin-left: 0;
-    }
+  @media (max-width: 500px) {
+    width: auto;
+    margin-left: 0;
+  }
 
   > a {
     width: fit-content;

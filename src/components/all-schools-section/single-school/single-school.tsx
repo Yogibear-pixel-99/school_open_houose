@@ -1,7 +1,24 @@
 import styles from "./single-school.module.scss";
 import type { School } from "../schools";
 
-export default function SingleSchool({name, address, hrefPath, dayOfOpen}: School) {
+/**
+ * Displays information about a single school including its name, address,
+ * a link to the homepage, and the open day information.
+ *
+ * @param {Object} props - Component props
+ * @param {string} props.name - The name of the school
+ * @param {string} props.address - The address of the school
+ * @param {string} props.hrefPath - URL to the school's homepage
+ * @param {string} props.dayOfOpen - Date or description of the open day event
+ *
+ * @returns {JSX.Element} A section element containing the school's information
+ */
+export default function SingleSchool({
+  name,
+  address,
+  hrefPath,
+  dayOfOpen,
+}: School) {
   return (
     <section
       className={`${styles["main-content"]} border-txt-box std-glas-effect-shadow pad-txt-box`}>
@@ -18,9 +35,7 @@ export default function SingleSchool({name, address, hrefPath, dayOfOpen}: Schoo
       </div>
       <div>
         <span className={`school-box-header-font`}>Tag der offenen Tür - </span>
-        <span className={`main-txt-font`}>
-          {dayOfOpen}
-        </span>
+        <span className={`main-txt-font`}>{dayOfOpen}</span>
       </div>
     </section>
   );

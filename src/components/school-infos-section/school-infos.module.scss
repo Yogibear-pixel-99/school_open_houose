@@ -5,7 +5,6 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-
   > h1 {
     text-align: center;
   }
@@ -50,13 +49,13 @@
 }
 
 .input-wrapper {
-    align-items: center;
-    flex-direction: column;
-    gap: 4px;
-    margin: 24px 0 0 0;
+  align-items: center;
+  flex-direction: column;
+  gap: 4px;
+  margin: 24px 0 0 0;
 }
 
 .input-error-wrapper {
-width: 120px;
-height: 17px;
+  width: 120px;
+  height: 17px;
 }

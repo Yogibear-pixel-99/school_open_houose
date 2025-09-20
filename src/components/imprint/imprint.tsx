@@ -2,6 +2,15 @@ import styles from "./imprint.module.scss";
 import Header from "./../header/header";
 import { Link } from "react-router-dom";
 
+/**
+ * React component that displays the legal disclosure (Impressum).
+ *
+ * This component renders a static section with legal information required by Austrian/EU law,
+ * including provider identification, liability disclaimer, copyright,
+ * and links to external sites. It is intended to meet legal obligations for website ownership and transparency.
+ *
+ * @returns {JSX.Element} A section containing imprint/legal information and a link to navigate back.
+ */
 export default function Imprint() {
   return (
     <section id="imprint" className={`${styles["main-content"]}`}>

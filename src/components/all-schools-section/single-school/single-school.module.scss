@@ -1,6 +1,6 @@
 .main-content {
-    width: 520px;
-    background-image: url("../../../assets/images/main-section/banner_2887331_1920.webp");
+  width: 520px;
+  background-image: url("../../../assets/images/main-section/banner_2887331_1920.webp");
   background-repeat: no-repeat;
   background-size: cover;
   transition: scale ease-in-out 125ms;
@@ -17,23 +17,19 @@
   &:hover {
     filter: brightness(1.1);
     scale: 1.05;
-    border: solid 1px #B0E3F6;
+    border: solid 1px #b0e3f6;
     cursor: default;
 
-  
     > div {
-
-        > a {
-
-
-            &:hover {
-                color: #8CC230;
-            }
+      > a {
+        &:hover {
+          color: #8cc230;
         }
+      }
     }
   }
 
-    > h3 {
-        margin: 0 0 24px;
-    }
+  > h3 {
+    margin: 0 0 24px;
+  }
 }

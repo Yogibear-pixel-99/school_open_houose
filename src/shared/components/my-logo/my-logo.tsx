@@ -1,14 +1,23 @@
-import styles from './my-logo.module.scss';
+import styles from "./my-logo.module.scss";
 
 type colorClasses = {
-    clrClass: string;
-    hvrColor: string;
-}
+  clrClass: string;
+  hvrColor: string;
+};
 
-export default function MyLogo({clrClass, hvrColor}: colorClasses) {
+/**
+ * SVG logo component with customizable color and hover color classes.
+ *
+ * @param {object} props - Component props.
+ * @param {string} props.clrClass - CSS class for the logo's base color.
+ * @param {string} props.hvrColor - CSS class for the logo's hover color effect.
+ *
+ * @returns {JSX.Element} The SVG logo element.
+ */
+export default function MyLogo({ clrClass, hvrColor }: colorClasses) {
   return (
     <svg
-    className={`${styles[clrClass]} ${styles[hvrColor]}`}
+      className={`${styles[clrClass]} ${styles[hvrColor]}`}
       version="1.1"
       width="100%"
       height="100%"

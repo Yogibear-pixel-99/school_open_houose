@@ -1,5 +1,17 @@
 import styles from "./text-content.module.scss";
 
+/**
+ * React component that renders the hero section text content.
+ *
+ * This component provides introductory information to parents and students
+ * about the upcoming school transition. It includes common questions
+ * and a note encouraging users to suggest missing schools via email.
+ *
+ * It is intended to be used inside a hero or landing section to provide
+ * context and engage users with helpful information.
+ *
+ * @returns {JSX.Element} A styled content box with headline, text, and a list of FAQs.
+ */
 export default function HeroText() {
   return (
     <div

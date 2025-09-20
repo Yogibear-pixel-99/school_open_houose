@@ -1,18 +1,18 @@
 @use "../../shared/styles/mixins" as mixins;
 
-
 .main-content {
-    @include mixins.flexspbtw(space-between, center);
-  background: url("../../assets/images/contact-infos/blackboard-2618793_1920.jpg") no-repeat center / 100% 100%;
+  @include mixins.flexspbtw(space-between, center);
+  background: url("../../assets/images/contact-infos/blackboard-2618793_1920.jpg")
+    no-repeat center / 100% 100%;
 
-    @media (max-width: 1000px) {
-      flex-direction: column;
-    }
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
 
   > div {
     width: 50dvw;
 
-        @media (max-width: 1000px) {
+    @media (max-width: 1000px) {
       width: 100%;
     }
   }
