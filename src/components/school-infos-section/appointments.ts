@@ -72,3 +72,5 @@ export const appointments = [
         justification: "Sommerferien"
     }
 ];
+
+export const passkey = "Waldschule";
