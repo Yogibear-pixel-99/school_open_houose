@@ -1,3 +1,13 @@
+@use "../styles/colors/colors" as colors;
+
 .error-color {
-    color: #d47f39;
+  color: #d47f39;
+}
+
+.input-std-layout {
+  padding: 12px 24px;
+  border-radius: 4px;
+  background-color: colors.$main-btn-bg-clr;
+  color: colors.$main-btn-txt-clr;
+  cursor: pointer;
 }

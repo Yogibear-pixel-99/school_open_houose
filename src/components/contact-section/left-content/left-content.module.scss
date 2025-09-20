@@ -8,6 +8,10 @@
 .img-wrapper {
       height: 300px;
 
+      @media (max-width: 400px) {
+        display: none;
+      }
+
             > img {
             height: 100%;
             width: auto;

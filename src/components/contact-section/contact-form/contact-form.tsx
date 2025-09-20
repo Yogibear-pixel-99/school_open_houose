@@ -215,7 +215,7 @@ export default function ContactForm() {
         <input
           className={`${
             errors.name ? styles["error"] : ""
-          } input-placeholder-font`}
+          } input-placeholder-font input-std-layout`}
           type="text"
           id="fullname"
           name="fullname"
@@ -233,7 +233,7 @@ export default function ContactForm() {
         <input
           className={`${
             errors.name ? styles["error"] : ""
-          } input-placeholder-font`}
+          } input-placeholder-font input-std-layout`}
           type="text"
           id="email"
           name="email"
@@ -252,7 +252,7 @@ export default function ContactForm() {
         <input
           className={`${
             errors.name ? styles["error"] : ""
-          } input-placeholder-font`}
+          } input-placeholder-font input-std-layout`}
           type="text"
           id="school"
           name="school"
@@ -270,7 +270,7 @@ export default function ContactForm() {
         <input
           className={`${
             errors.name ? styles["error"] : ""
-          } input-placeholder-font`}
+          } input-placeholder-font input-std-layout`}
           type="text"
           name="question"
           id="question"
@@ -283,26 +283,27 @@ export default function ContactForm() {
           Keine Sonderzeichen
         </span>
       </label>
-      <label className="input-label-font" htmlFor="privacy">
-        {" "}
-        <span>
-          <a href="#">Datenschutzerklärung</a>.
-        </span>
-        Ich akzeptiere die{" "}
+      <div className={`${styles["checkbox-wrapper"]} input-label-font`}>
+        <label className="input-label-font" htmlFor="privacy">
+          {" "}
+        </label>
         <input
-          className="input-placeholder-font"
+          className={`input-placeholder-font ${styles["checkbox-field"]}`}
           type="checkbox"
           name="privacy"
           id="privacy"
           checked={contactData.privacy}
           onChange={changePrivacyValue}
         />
-      </label>
+        <span className={styles["custom-checkbox"]}>
+          Ich akzeptiere die <a href="#">Datenschutzerklärung</a>.
+        </span>
+      </div>
       <span
         className={`input-error-font ${errorClasses.errorPrivacy} ${styles["privacy-error"]}`}>
         Akzeptiere die Datenschutzerklärung
       </span>
-      <button type="submit" className="button-std-font">
+      <button type="submit" className="button-std-font btn-std-layout">
         Abschicken
       </button>
     </form>

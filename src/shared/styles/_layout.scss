@@ -1,21 +1,33 @@
 .pad-main {
   padding: 48px;
+
+    @media (max-width: 768px) {
+    padding: 20px;
+  }
 }
 
 .pad-main-header {
   padding: 12px 48px;
 
-  @media (max-width: 525px) {
-    padding: 8px 12px;
+  @media (max-width: 768px) {
+    padding: 12px;
   }
 }
 
 .pad-main-footer {
   padding: 12px 48px;
+
+    @media (max-width: 768px) {
+    padding: 12px;
+  }
 }
 
 .pad-txt-box {
   padding: 20px;
+
+    @media (max-width: 768px) {
+    padding: 12px;
+  }
 }
 
 .border-txt-box {
@@ -48,5 +60,3 @@
   );
   filter: grayscale(0.7);
 }
-
-//  className={`${styles['']}`}

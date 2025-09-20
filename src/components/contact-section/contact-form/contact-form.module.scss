@@ -1,34 +1,64 @@
 @use "./../../../shared/styles/mixins" as mixins;
+@use "./../../../shared/styles/colors/colors" as colors;
 
 .main-content {
-    @include mixins.flexspbtw(center, flex-start);
+  @include mixins.flexspbtw(center, flex-start);
+  flex-direction: column;
+  gap: 24px;
+
+  > label {
+    width: 100%;
+    display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 4px;
+  }
 
-    > label {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-
-            > input {
-        padding: 6px 24px;
-    }
-    }
-
-    > label:nth-child(5) {
-        flex-direction: row-reverse;
-        width: auto;
-        justify-self: flex-start;
-    }
-
-
+  > label:nth-child(5) {
+    flex-direction: row;
+  }
 }
 
 .error::placeholder {
-color: red;
+  color: red;
 }
 
 .privacy-error {
-    transform: translateY(-22px);
+  transform: translateY(-22px);
+}
+
+.checkbox-wrapper {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+
+  > input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: url("../../../../../public/images/cursor_portfolio_hover.png"),
+      pointer;
+    min-width: 18px;
+    min-height: 18px;
+    max-width: 18px;
+    max-height: 18px;
+    border: solid 2px colors.$main-btn-bg-clr;
+    border-radius: 2px;
+
+    &:hover {
+      background-color: colors.$main-btn-txt-clr;
+    }
+  }
+
+  > input[type="checkbox"]:checked::after {
+    content: "✔";
+    position: absolute;
+    top: 0;
+    min-width: 18px;
+    min-height: 18px;
+    max-width: 18px;
+    max-height: 18px;
+    color: #e8103f;
+    font-size: 18px;
+  }
 }

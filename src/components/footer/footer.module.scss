@@ -18,17 +18,21 @@
 
   > div {
     > span {
-        > a {
-            &:hover {
-                color:#e8103f;
-            }
+      > a {
+        &:hover {
+          color: #e8103f;
         }
+      }
     }
   }
 }
 
 .right {
   width: 140px;
+
+  @media (max-width: 650px) {
+    width: 90px;
+  }
 
   > img {
     width: 100%;
@@ -45,8 +49,6 @@
     width: 60px;
     height: auto;
     cursor: pointer !important;
-
-
   }
 
   > nav {
@@ -55,7 +57,11 @@
 }
 
 .left {
-  width: 250px;
+  //   width: 250px;
+
+  @media (max-width: 650px) {
+    margin-top: auto;
+  }
 
   > span:nth-child(1) {
     font-weight: 600;
@@ -63,23 +69,50 @@
 
   > div {
     > img {
-      width: 100%;
+      width: 250px;
       height: auto;
+
+      @media (max-width: 650px) {
+        width: 125px;
+      }
     }
   }
 }
 
 .footer-link {
-    font-weight: 500 !important;
+  font-weight: 500 !important;
 
-    &:hover {
-        color:#e8103f;
-
-    }
+  &:hover {
+    color: #e8103f;
+  }
 }
 
 .logo-wrapper {
+  cursor: pointer !important;
 
-cursor: pointer !important;
+  @media (max-width: 650px) {
+    width: 40px;
+    max-width: 40px;
+  }
+}
 
+.my-mail {
+  @media (max-width: 650px) {
+    display: none;
+  }
+}
+
+.mobile-imprint-policy {
+  display: none;
+  @media (max-width: 450px) {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+
+.desktop-imprint-policy {
+  @media (max-width: 450px) {
+    display: none;
+  }
 }

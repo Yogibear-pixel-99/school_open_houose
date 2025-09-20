@@ -15,17 +15,29 @@ export default function Footer() {
             </a>
           </span>
           <br />
-          <span>
+          <span className={`${styles["my-mail"]}`}>
             <a href="mailto:contact@puercherjoachim.com">
               contact@puercherjoachim.com
             </a>
+            <br />
           </span>
-          <br />
           <span>Webentwickler</span>
           <br />
           <div>
             <img src={pencil} alt="Bleistift" />
           </div>
+          <nav className={`${styles['mobile-imprint-policy']}`}>
+            <Link
+              className={`${styles["footer-link"]} small-txt-font`}
+              to="/imprint">
+              Impressum
+            </Link>
+            <Link
+              className={`${styles["footer-link"]} small-txt-font`}
+              to="/privacy">
+              Datenschutz
+            </Link>
+          </nav>
         </div>
         <div className={`${styles["middle"]}`}>
           <a
@@ -34,7 +46,7 @@ export default function Footer() {
             target="_blank">
             <MyLogo clrClass="logo-red" hvrColor="logo-hover-red" />
           </a>
-          <nav>
+          <nav className={`${styles['desktop-imprint-policy']}`}>
             <Link
               className={`${styles["footer-link"]} small-txt-font`}
               to="/imprint">

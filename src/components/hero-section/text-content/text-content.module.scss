@@ -1,9 +1,16 @@
 .content {
   display: flex;
   flex-direction: column;
-
   width: 40dvw;
   margin-left: auto;
+
+      @media (max-width: 1000px) {
+      width: 60dvw;
+    }
+
+      @media (max-width: 500px) {
+      width: 80dvw;
+    }
 
   > a {
     width: fit-content;
