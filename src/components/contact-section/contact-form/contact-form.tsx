@@ -123,10 +123,11 @@ export default function ContactForm() {
    */
   const handleSubmit = (event: any) => {
     event.preventDefault();
+    let payload = contactData;
     checkIfEmpty();
 
     if (validInputs() && errorsTrue()) {
-      sendData();
+      sendData(payload);
     }
   };
 
@@ -242,13 +243,14 @@ export default function ContactForm() {
   };
 
   const endPoint: string =
-    "https://www.puercherjoachim.com/schoolinfos/sendMailSchool.php";
+    "https://www.schoolinfos.puercherjoachim.com/sendMailSchool.php";
 
   /**
    * Sends the form data to the backend endpoint using fetch API.
    * Logs success or error to the console.
+   * Deletes session storage data on fetch success.
    */
-  const sendData = async () => {
+  const sendData = async (payload:ContactForm) => {
     try {
       const response = await fetch(endPoint, {
         method: "POST",
@@ -256,7 +258,7 @@ export default function ContactForm() {
           "Content-Type": "text/plain",
           responseType: "text",
         },
-        body: JSON.stringify(contactData),
+        body: JSON.stringify(payload),
       });
 
       if (!response.ok) {
@@ -264,6 +266,7 @@ export default function ContactForm() {
       }
 
       const data = await response.json();
+      sessionStorage.removeItem('contactData');
       console.log(data);
     } catch (error) {
       console.error("Fehler beim Senden:", (error as Error).message);

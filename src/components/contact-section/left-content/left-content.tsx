@@ -21,19 +21,18 @@ export default function LeftContactContent() {
           Kontaktiert mich
         </h3>
         <p className={`${styles["text-box"]} main-txt-font`}>
-          Für fehlenden Inhalt, Anregungen, Ideen oder Wünsche bezüglich dieser
-          Seite, kontaktiert mich bitte. Entweder per WhatsApp oder über das
-          vorhanden Kontaktforumlar nebenbei.
+          Für fehlende Inhalte, Anregungen, Ideen oder Wünsche bezüglich dieser
+          Seite kontaktiert mich bitte – entweder per WhatsApp oder über das
+          vorhandene Kontaktformular daneben.
         </p>
-        <p className={`${styles[""]} main-txt-font`}>
-          Die Idee dieser Seite ist, alle Infos bezüglich dem Schuljahr und
-          unserer Schule auf einer Seite zu haben. Kein lästiges Zettel suchen
-          oder ständinges nachfragen mehr.
+        <p className={`main-txt-font`}>
+          Die Idee dieser Seite ist es, alle Infos bezüglich des Schuljahres und
+          unserer Schule auf einer Seite zu bündeln. Kein lästiges Zettelsuchen
+          oder ständiges Nachfragen mehr.
         </p>
-        <p className={`${styles[""]} main-txt-font`}>
-          Alle Infos auf einen Blick, immer und überall, auch am Smartphone.
+        <p className={`main-txt-font`}>
+          Alle Infos auf einen Blick – immer und überall, auch am Smartphone.
         </p>
-        
       </div>
       <div className={styles['img-wrapper']}>
         <img src={childAndBooks} alt="Schulkind" />

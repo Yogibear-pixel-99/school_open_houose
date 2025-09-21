@@ -101,6 +101,7 @@ export default function SchoolInfos() {
           className="input-placeholder-font input-std-layout"
           id="schoolInfoInput"
           type="text"
+          autoComplete="off"
           onChange={changeCodeInputField}
           value={codeWord}
         />

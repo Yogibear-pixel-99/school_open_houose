@@ -1,10 +1,20 @@
+.main-content-wrapper {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-height: 700px) {
+    height: auto;
+  }
+}
+
 .main-content {
   position: relative;
   background-color: rgba(0, 0, 0, 0.144);
   background-repeat: no-repeat;
   background-position: left;
   background-size: cover;
-  height: calc(100dvh - 208px);
+  flex: 1;
 
   @media (min-width: 1281px) {
     background-image: url("../../assets/images/hero-section/students-3518726_1920.jpg");
@@ -22,6 +32,6 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 50px;
+  height: 25px;
   background: linear-gradient(rgb(95, 95, 95), rgba(0, 0, 0, 0));
 }

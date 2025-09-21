@@ -8,7 +8,6 @@ export function MainPage () {
     return (
             <>
               <HeroSection />
-              <SectionSeparator />
               <MainSection />
               <SectionSeparator />
               <SchoolInfos />

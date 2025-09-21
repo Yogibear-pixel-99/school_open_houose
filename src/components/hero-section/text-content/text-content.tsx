@@ -19,17 +19,17 @@ export default function HeroText() {
       <h3 className="sub-header-font-small">Der Schulwechsel steht bevor</h3>
       <p className="main-txt-font">
         Das vierte Volksschuljahr hat begonnen. Viele von euch stellen sich noch
-        einige Fragen diesbezüglich.
+        einige Fragen dazu.
       </p>
       <ul className="main-txt-font">
         <li>Welche Schulen stehen zur Auswahl?</li>
         <li>Welche Schwerpunkte haben diese?</li>
-        <li>Wann ist Tag der offenen Tür?</li>
-        <li>Muss ich mein Kind dazu anmelden?</li>
+        <li>Wann ist der Tag der offenen Tür?</li>
+        <li>Muss ich mein Kind dafür anmelden?</li>
       </ul>
       <p className="main-txt-font">
-        Gleich unterhalb habe ich alle Schulen aufgelistet, die in Frage kommen.
-        Bitte schickt mir von Schulen die noch fehlen eine EMail, damit ich sie
+        Gleich unten habe ich alle Schulen aufgelistet, die infrage kommen.
+        Bitte schickt mir eine E-Mail zu Schulen, die noch fehlen, damit ich sie
         hinzufügen kann. Danke!
       </p>
     </div>

@@ -17,11 +17,9 @@ export default function Header() {
     <section className={`${styles["main-content"]} pad-main-header`}>
       <div>
         <h1 className="sub-header-font">
-          Tag der offenen Tür{" "}
-          <span className="show-max-1000-block"> 4. Klassen Schönering</span>
-          <span className="hide-max-1000">
-            - Für die Schüler der 4. Klassen der Volksschule Schönering.
-          </span>
+          Tag der offenen Tür -
+           weiterführende Schulen
+
         </h1>
         <div className={styles["img-wrapper"]}>
           <img src={busLogo} alt="Schulbus" />
