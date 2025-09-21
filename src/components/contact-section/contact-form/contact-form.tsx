@@ -123,13 +123,10 @@ export default function ContactForm() {
    */
   const handleSubmit = (event: any) => {
     event.preventDefault();
-    const payload = JSON.stringify(contactData);
-    console.log(payload);
-    debugger
     checkIfEmpty();
 
     if (validInputs() && errorsTrue()) {
-      sendData(payload);
+      sendData(contactData);
     }
   };
 
@@ -252,7 +249,7 @@ export default function ContactForm() {
    * Logs success or error to the console.
    * Deletes session storage data on fetch success.
    */
-  const sendData = async (payload:string) => {
+  const sendData = async (payload:ContactForm) => {
     try {
       const response = await fetch(endPoint, {
         method: "POST",
@@ -260,7 +257,7 @@ export default function ContactForm() {
           "Content-Type": "text/plain",
           responseType: "text",
         },
-        body: payload,
+        body: JSON.stringify(payload),
       });
 
       if (!response.ok) {
