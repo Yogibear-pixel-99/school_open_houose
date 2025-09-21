@@ -61,6 +61,7 @@ export default function ContactForm() {
   });
 
   const [formSendSuccess, setFormSendSuccess] = useState(false);
+  const [hideOverlay, setHideOverlay] = useState(true);
 
   useEffect(() => {
     const savedContactData: string | null =
@@ -266,19 +267,20 @@ export default function ContactForm() {
       if (!response.ok) {
         throw new Error(`Fehler: ${response.status}`);
       }
-
-      const data = await response.json();
-      sessionStorage.removeItem("contactData");
-      setFormSendSuccess(true);
-      setTimeout(() => setFormSendSuccess(false), 5000);
-      setContactData({
-        ...contactData,
-        name: "",
-        email: "",
-        school: "",
-        message: "",
-        privacy: false,
-      });
+        sessionStorage.removeItem("contactData");
+        setHideOverlay(false);
+        requestAnimationFrame(() => setFormSendSuccess(true));
+        setTimeout(() => setFormSendSuccess(false), 5000);
+        setTimeout(() => setHideOverlay(true), 5350);
+        setContactData({
+          ...contactData,
+          name: "",
+          email: "",
+          school: "",
+          message: "",
+          privacy: false,
+        });
+      
     } catch (error) {
       console.error("Fehler beim Senden:", (error as Error).message);
     }
@@ -289,7 +291,7 @@ export default function ContactForm() {
       <div
         className={`${styles["overlay"]} ${
           formSendSuccess ? styles["open-overlay"] : ""
-        } sub-header-font-small`}>
+        } sub-header-font-small ${hideOverlay ? "hide-display" : ""}`}>
         Deine Daten wurden erfolgreich übermittelt, danke!
       </div>
       <form

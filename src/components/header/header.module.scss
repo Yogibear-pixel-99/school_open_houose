@@ -47,10 +47,11 @@
       text-align: center;
 
       &:hover {
-        color: #900257;
+        color: #691a18;
         box-shadow: 0 0 10px rgba(117, 48, 83, 0.8),
-          0 0 5px rgba(110, 44, 77, 0.6), 0 0 10px rgba(255, 105, 180, 0.4),
-          0 0 20px rgba(255, 105, 180, 0.2);
+          0 0 5px #691a18, 0 0 10px #691a18,
+          0 0 20px #691a18;
+          background: #6919182c;
       }
 
       @media (max-width: 800px) {

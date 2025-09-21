@@ -1,7 +1,6 @@
 
 
 import ContactForm from "../contact-form/contact-form";
-import styles from "./right-content.module.scss";
 
 /**
  * React component that renders the right side of the contact section.

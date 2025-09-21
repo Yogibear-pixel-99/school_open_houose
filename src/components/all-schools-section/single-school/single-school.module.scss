@@ -10,13 +10,13 @@
   }
 
   &:hover > div > a {
-    background-color: rgba(93, 60, 139, 0.5);
+    background-color: #69191852;
     border-radius: 6px;
   }
 
   &:hover {
     filter: brightness(1.1);
-    scale: 1.05;
+    scale: 1.02;
     border: solid 1px #b0e3f6;
     cursor: default;
 

@@ -48,13 +48,13 @@ export const allSchools: SchoolsData = [
     name: "Sportschule Eferding Süd",
     address: "Welser Straße 19, 4070 Eferding",
     hrefPath: "https://www.xn--sms-sd-7ya.at/",
-    dayOfOpen: "Noch kein Termin",
+    dayOfOpen: "21. November 2025",
   },
   {
     name: "Private pädagogische Hochschule der Diozöse Linz",
     address: "Salesianumweg 5, 4020 Linz",
     hrefPath: "https://www.stifterschule.at/",
-    dayOfOpen: "Kein Termin gefunden",
+    dayOfOpen: "11. November 2025",
   },
   //     {
   // name: "",

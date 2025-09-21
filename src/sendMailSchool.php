@@ -32,7 +32,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $headers[] = "From: noreply@mywebsite.com";
 
             mail($recipient, $subject, $message, implode("\r\n", $headers));
-            echo json_encode(["status" => "success"]);
+          
             break;
         default: //Reject any non POST or OPTIONS requests.
             header("Allow: POST", true, 405);
