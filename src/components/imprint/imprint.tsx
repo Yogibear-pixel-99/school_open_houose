@@ -16,6 +16,7 @@ export default function Imprint() {
     <section id="imprint" className={`${styles["main-content"]}`}>
       <Header />
       <div className="pad-main">
+      <div className={styles["shadow-separator"]}></div>
         <h1 className="sub-header-font">Impressum</h1>
 
         <h2 className="sub-header-font-small">Angaben zum Diensteanbieter</h2>

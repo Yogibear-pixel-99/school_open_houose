@@ -7,7 +7,9 @@
   @include mixins.flexspbtw();
   flex-direction: column;
 
+
   > div {
+      position: relative;
     > h2 {
       margin-top: 32px;
     }
@@ -31,4 +33,13 @@
   &:hover {
     color: #e97100;
   }
+}
+
+.shadow-separator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 25px;
+  background: linear-gradient(rgb(95, 95, 95), rgba(0, 0, 0, 0));
 }

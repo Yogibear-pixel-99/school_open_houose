@@ -15,6 +15,7 @@ export default function PrivacyPolicy() {
     <section className={`${styles["main-content"]}`}>
       <Header />
       <div className="pad-main">
+      <div className={styles["shadow-separator"]}></div>
         <h2 className="sub-header-font">Erklärung zur Informationspflicht</h2>
 
         <h2 className="sub-header-font-small">Datenschutzerklärung</h2>

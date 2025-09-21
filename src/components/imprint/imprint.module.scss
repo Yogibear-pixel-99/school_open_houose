@@ -8,6 +8,7 @@
   flex-direction: column;
 
   > div {
+    position: relative;
     flex: 1;
 
     > h2 {
@@ -42,4 +43,13 @@
   &:hover {
     color: #e97100;
   }
+}
+
+.shadow-separator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 25px;
+  background: linear-gradient(rgb(95, 95, 95), rgba(0, 0, 0, 0));
 }

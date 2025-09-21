@@ -6,7 +6,6 @@
   background-color: colors.$main-btn-bg-clr;
   color: colors.$main-btn-txt-clr;
   cursor: pointer;
-  box-shadow: 1px 1px 4px 4px rgba(0, 0, 0, 0.377);
 
   &:hover {
     box-shadow: 1px 1px 4px 4px rgba(0, 0, 0, 0.671);
