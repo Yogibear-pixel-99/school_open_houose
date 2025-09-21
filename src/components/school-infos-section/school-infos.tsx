@@ -1,4 +1,5 @@
-import { appointments, passkey } from "./appointments";
+import { schoolFreeDays, passkey } from "./schoolFreeDays";
+import { importantSchoolDates } from "./schoolImportantDates";
 import styles from "./school-infos.module.scss";
 import { useState } from "react";
 
@@ -11,7 +12,7 @@ import { useState } from "react";
  * @returns {JSX.Element} Section containing school day off information and an input field to unlock it.
  */
 export default function SchoolInfos() {
-  interface SchoolInfos {
+  interface FreeSchoolDays {
     id: number | string;
     justification: string;
     days: string;
@@ -22,7 +23,7 @@ export default function SchoolInfos() {
   /**
    * Represents a school day off entry.
    */
-  const emptySchoolData: SchoolInfos[] = [
+  const emptySchoolData: FreeSchoolDays[] = [
     {
       id: "",
       justification: "",
@@ -32,7 +33,10 @@ export default function SchoolInfos() {
     },
   ];
 
-  const [schoolData, setSchoolData] = useState<SchoolInfos[]>(emptySchoolData);
+  const [freeSchoolDays, setFreeSchoolDays] =
+    useState<FreeSchoolDays[]>(emptySchoolData);
+  const [importantDates, setImportantDates] =
+    useState<FreeSchoolDays[]>(emptySchoolData);
   const [showSchoolData, setShowSchoolData] = useState(false);
   const [codeWord, setCodeWord] = useState("");
   const [schoolDataError, setSchoolDataError] = useState(false);
@@ -48,7 +52,7 @@ export default function SchoolInfos() {
     setCodeWord(event.target.value);
   };
 
-    /**
+  /**
    * Checks whether the entered codeword is correct.
    * If correct, displays the school data. Otherwise, shows an error message.
    *
@@ -56,11 +60,13 @@ export default function SchoolInfos() {
    */
   const checkCodeWord = () => {
     if (codeWord === passkey) {
-      setSchoolData(appointments);
+      setFreeSchoolDays(schoolFreeDays);
+      setImportantDates(importantSchoolDates);
       setShowSchoolData(true);
       setSchoolDataError(false);
     } else {
-      setSchoolData(emptySchoolData);
+      setFreeSchoolDays(emptySchoolData);
+      setImportantDates(emptySchoolData);
       setShowSchoolData(false);
       setSchoolDataError(true);
     }
@@ -72,9 +78,11 @@ export default function SchoolInfos() {
         Schulfreie Tage im Schuljahr 2025/26
       </h1>
       <div className={`${showSchoolData ? "block-display" : "hide-display"}`}>
-        {schoolData.map((data) => {
+        {freeSchoolDays.map((data) => {
           return (
-            <p key={data.id} className="main-txt-font">
+            <div
+              key={data.id}
+              className={`${styles["note-wrapper"]} main-txt-font`}>
               <span className="school-box-header-font">
                 {data.justification}
               </span>
@@ -82,14 +90,46 @@ export default function SchoolInfos() {
                 <span>{data.days}</span>
                 <div>
                   <span>{data.from}</span>
-                  <span> - </span>
+                  <span className={`${data.from === "" ? "hide-display" : ""}`}>
+                    {" "}
+                    -{" "}
+                  </span>
                   <span>{data.to}</span>
                 </div>
               </div>
-            </p>
+            </div>
           );
         })}
       </div>
+
+      <h1 className={`${styles["header"]} sub-header-font`}>
+        Termine im Schuljahr 2025/26
+      </h1>
+      <div className={`${showSchoolData ? "block-display" : "hide-display"}`}>
+        {importantDates.map((data) => {
+          return (
+            <div
+              key={data.id}
+              className={`${styles["note-wrapper"]} main-txt-font`}>
+              <span className="school-box-header-font">
+                {data.justification}
+              </span>
+              <div>
+                <span>{data.days}</span>
+                <div>
+                  <span>{data.from}</span>
+                  <span className={`${data.from === "" ? "hide-display" : ""}`}>
+                    {" "}
+                    -{" "}
+                  </span>
+                  <span>{data.to}</span>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
       <div
         className={`${styles["input-wrapper"]} ${
           !showSchoolData ? "flex-display" : "hide-display"

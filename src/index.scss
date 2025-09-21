@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  // cursor: default;
 }
 
 html, body {
@@ -21,6 +20,15 @@ body::-webkit-scrollbar {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
+  cursor: default;
+}
+
+span, p, li, ol, ul {
+  cursor: default;
+}
+
+input {
+  cursor:text !important;
 }
 
 a {

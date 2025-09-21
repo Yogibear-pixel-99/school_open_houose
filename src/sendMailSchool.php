@@ -17,7 +17,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $email = $params->email;
             $name = $params->name;
             $message = $params->message;
-            $school = $school->school;
+            $school = $params->school;
             $privacy = $params->privacy;
     
             $recipient = 'contact@puercherjoachim.com';  

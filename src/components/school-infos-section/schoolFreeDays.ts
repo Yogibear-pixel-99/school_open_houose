@@ -1,4 +1,4 @@
-export const appointments = [
+export const schoolFreeDays = [
   {
     id: 1,
     from: "27.10.2025",
@@ -8,7 +8,7 @@ export const appointments = [
   },
   {
     id: 2,
-    from: "08.12.2025",
+    from: "",
     to: "08.12.2025",
     days: "Montag",
     justification: "Mariä Empfängnis",
@@ -36,42 +36,42 @@ export const appointments = [
   },
   {
     id: 6,
-    from: "01.05.2026",
+    from: "",
     to: "01.05.2026",
     days: "Freitag",
     justification: "Staatsfeiertag",
   },
   {
     id: 7,
-    from: "04.05.2026",
+    from: "",
     to: "04.05.2026",
     days: "Montag",
     justification: "Hl. Florian",
   },
   {
     id: 8,
-    from: "14.05.2026",
+    from: "",
     to: "14.05.2026",
     days: "Donnerstag",
     justification: "Christi Himmelfahrt",
   },
   {
     id: 9,
-    from: "25.05.2026",
+    from: "",
     to: "25.05.2026",
     days: "Montag",
     justification: "Pfingsten",
   },
   {
     id: 10,
-    from: "04.06.2026",
+    from: "",
     to: "04.06.2026",
     days: "Donnerstag",
     justification: "Fronleichnam",
   },
   {
     id: 11,
-    from: "05.06.2026",
+    from: "",
     to: "05.06.2026",
     days: "Freitag",
     justification: "schulautonomer freier Tag",

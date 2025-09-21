@@ -243,7 +243,7 @@ export default function ContactForm() {
   };
 
   const endPoint: string =
-    "https://www.schoolinfos.puercherjoachim.com/sendMailSchool.php";
+    "https://www.puercherjoachim.com/schoolinfos/sendMailSchool.php";
 
   /**
    * Sends the form data to the backend endpoint using fetch API.
