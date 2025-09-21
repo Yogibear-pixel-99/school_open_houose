@@ -11,3 +11,7 @@
   color: colors.$main-btn-txt-clr;
   cursor: pointer;
 }
+
+.no-pointer-events {
+  pointer-events: none;
+}

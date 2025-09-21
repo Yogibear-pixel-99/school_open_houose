@@ -60,6 +60,8 @@ export default function ContactForm() {
     privacy: false,
   });
 
+  const [formSendSuccess, setFormSendSuccess] = useState(false);
+
   useEffect(() => {
     const savedContactData: string | null =
       sessionStorage.getItem("contactData");
@@ -123,6 +125,7 @@ export default function ContactForm() {
    */
   const handleSubmit = (event: any) => {
     event.preventDefault();
+
     checkIfEmpty();
 
     if (validInputs() && errorsTrue()) {
@@ -249,7 +252,7 @@ export default function ContactForm() {
    * Logs success or error to the console.
    * Deletes session storage data on fetch success.
    */
-  const sendData = async (payload:ContactForm) => {
+  const sendData = async (payload: ContactForm) => {
     try {
       const response = await fetch(endPoint, {
         method: "POST",
@@ -265,120 +268,143 @@ export default function ContactForm() {
       }
 
       const data = await response.json();
-      sessionStorage.removeItem('contactData');
-      console.log(data);
+      sessionStorage.removeItem("contactData");
+      setFormSendSuccess(true);
+      setTimeout(() => setFormSendSuccess(false), 5000);
+      setContactData({
+        ...contactData,
+        name: "",
+        email: "",
+        school: "",
+        message: "",
+        privacy: false,
+      });
     } catch (error) {
       console.error("Fehler beim Senden:", (error as Error).message);
     }
   };
 
   return (
-    <form className={styles["main-content"]} onSubmit={handleSubmit}>
-      <label className="input-label-font" htmlFor="fullname">
-        {" "}
-        Name
-        <input
-          className={`${
-            errors.name ? styles["error"] : ""
-          } input-placeholder-font input-std-layout`}
-          type="text"
-          id="fullname"
-          name="fullname"
-          autoComplete="off"
-          maxLength={20}
-          placeholder={contactDataPlaceholder.nameEmpty}
-          value={contactData.name}
-          onChange={changeNameValue}
-        />
-        <span className={`input-error-font ${errorClasses.errorName}`}>
-          Nur Buchstaben oder Zahlen
-        </span>
-      </label>
-      <label className="input-label-font" htmlFor="email">
-        E-Mail Adresse
-        <input
-          className={`${
-            errors.email ? styles["error"] : ""
-          } input-placeholder-font input-std-layout`}
-          type="text"
-          id="email"
-          name="email"
-          autoComplete="off"
-          maxLength={30}
-          placeholder={contactDataPlaceholder.emailEmpty}
-          value={contactData.email}
-          onChange={changeEmailValue}
-        />
-        <span className={`input-error-font ${errorClasses.errorEmail}`}>
-          Keine gültige EMail Addresse
-        </span>
-      </label>
-      <label className="input-label-font" htmlFor="school">
-        {" "}
-        Zu ergänzende Schule
-        <input
-          className={`${
-            errors.school ? styles["error"] : ""
-          } input-placeholder-font input-std-layout`}
-          type="text"
-          id="school"
-          name="school"
-          autoComplete="off"
-          maxLength={30}
-          placeholder={contactDataPlaceholder.schoolEmpty}
-          value={contactData.school}
-          onChange={changeSchoolValue}
-        />
-        <span className={`input-error-font ${errorClasses.errorSchool}`}>
-          Keine Sonderzeichen erlaubt
-        </span>
-      </label>
-      <label className="input-label-font" htmlFor="question">
-        Andere Fragen oder Anregungen
-        <input
-          className={`${
-            errors.message ? styles["error"] : ""
-          } input-placeholder-font input-std-layout`}
-          type="text"
-          name="question"
-          id="question"
-          autoComplete="off"
-          maxLength={200}
-          placeholder={contactDataPlaceholder.messageEmpty}
-          value={contactData.message}
-          onChange={changeQuestionValue}
-        />
-        <span className={`input-error-font ${errorClasses.errorMessage}`}>
-          Keine Sonderzeichen erlaubt
-        </span>
-      </label>
-      <div className={`${styles["checkbox-wrapper"]} input-label-font`}>
-        <label className="input-label-font" htmlFor="privacy">
-          {" "}
-        </label>
-        <input
-          className={`input-placeholder-font ${styles["checkbox-field"]}`}
-          type="checkbox"
-          name="privacy"
-          id="privacy"
-          checked={contactData.privacy}
-          onChange={changePrivacyValue}
-        />
-        <span className={styles["custom-checkbox"]}>
-          Ich akzeptiere die{" "}
-          <Link className={`${styles["privacy-link"]}`} to="/privacy">
-            Datenschutzerklärung
-          </Link>
-          .
-        </span>
+    <div className={`${styles["main-content-wrapper"]}`}>
+      <div
+        className={`${styles["overlay"]} ${
+          formSendSuccess ? styles["open-overlay"] : ""
+        } sub-header-font-small`}>
+        Deine Daten wurden erfolgreich übermittelt, danke!
       </div>
-      <span
-        className={`input-error-font ${errorClasses.errorPrivacy} ${styles["privacy-error"]}`}>
-        Akzeptiere die Datenschutzerklärung
-      </span>
-      <button type="submit" className={`button-std-font btn-std-layout`}>
-        Abschicken
-      </button>
-    </form>
+      <form
+        className={`${
+          styles["main-content"]
+        } pad-txt-box std-glas-effect-shadow border-txt-box ${
+          formSendSuccess ? styles["form-send"] : ""
+        }`}
+        onSubmit={handleSubmit}>
+        <label className="input-label-font" htmlFor="fullname">
+          {" "}
+          Name
+          <input
+            className={`${
+              errors.name ? styles["error"] : ""
+            } input-placeholder-font input-std-layout`}
+            type="text"
+            id="fullname"
+            name="fullname"
+            autoComplete="off"
+            maxLength={20}
+            placeholder={contactDataPlaceholder.nameEmpty}
+            value={contactData.name}
+            onChange={changeNameValue}
+          />
+          <span className={`input-error-font ${errorClasses.errorName}`}>
+            Nur Buchstaben oder Zahlen
+          </span>
+        </label>
+        <label className="input-label-font" htmlFor="email">
+          E-Mail Adresse
+          <input
+            className={`${
+              errors.email ? styles["error"] : ""
+            } input-placeholder-font input-std-layout`}
+            type="text"
+            id="email"
+            name="email"
+            autoComplete="off"
+            maxLength={30}
+            placeholder={contactDataPlaceholder.emailEmpty}
+            value={contactData.email}
+            onChange={changeEmailValue}
+          />
+          <span className={`input-error-font ${errorClasses.errorEmail}`}>
+            Keine gültige EMail Addresse
+          </span>
+        </label>
+        <label className="input-label-font" htmlFor="school">
+          {" "}
+          Zu ergänzende Schule
+          <input
+            className={`${
+              errors.school ? styles["error"] : ""
+            } input-placeholder-font input-std-layout`}
+            type="text"
+            id="school"
+            name="school"
+            autoComplete="off"
+            maxLength={30}
+            placeholder={contactDataPlaceholder.schoolEmpty}
+            value={contactData.school}
+            onChange={changeSchoolValue}
+          />
+          <span className={`input-error-font ${errorClasses.errorSchool}`}>
+            Keine Sonderzeichen erlaubt
+          </span>
+        </label>
+        <label className="input-label-font" htmlFor="question">
+          Andere Fragen oder Anregungen
+          <input
+            className={`${
+              errors.message ? styles["error"] : ""
+            } input-placeholder-font input-std-layout`}
+            type="text"
+            name="question"
+            id="question"
+            autoComplete="off"
+            maxLength={200}
+            placeholder={contactDataPlaceholder.messageEmpty}
+            value={contactData.message}
+            onChange={changeQuestionValue}
+          />
+          <span className={`input-error-font ${errorClasses.errorMessage}`}>
+            Keine Sonderzeichen erlaubt
+          </span>
+        </label>
+        <div className={`${styles["checkbox-wrapper"]} input-label-font`}>
+          <label className="input-label-font" htmlFor="privacy">
+            {" "}
+          </label>
+          <input
+            className={`input-placeholder-font ${styles["checkbox-field"]}`}
+            type="checkbox"
+            name="privacy"
+            id="privacy"
+            checked={contactData.privacy}
+            onChange={changePrivacyValue}
+          />
+          <span className={styles["custom-checkbox"]}>
+            Ich akzeptiere die{" "}
+            <Link className={`${styles["privacy-link"]}`} to="/privacy">
+              Datenschutzerklärung
+            </Link>
+            .
+          </span>
+        </div>
+        <span
+          className={`input-error-font ${errorClasses.errorPrivacy} ${styles["privacy-error"]}`}>
+          Akzeptiere die Datenschutzerklärung
+        </span>
+        <button type="submit" className={`button-std-font btn-std-layout`}>
+          Abschicken
+        </button>
+      </form>
+    </div>
   );
 }

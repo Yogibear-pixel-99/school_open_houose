@@ -1,10 +1,17 @@
 @use "./../../../shared/styles/mixins" as mixins;
 @use "./../../../shared/styles/colors/colors" as colors;
 
+.main-content-wrapper {
+  position: relative;
+  z-index: 10;
+}
+
 .main-content {
   @include mixins.flexspbtw(center, flex-start);
   flex-direction: column;
   gap: 24px;
+  position: relative;
+  z-index: 10;
 
   > label {
     width: 100%;
@@ -69,4 +76,30 @@
   &:hover {
     color: #aa0428;
   }
+}
+
+.form-send {
+  filter: grayscale(1);
+  transition: all 250ms ease-in-out;
+  pointer-events: none;
+}
+
+.overlay {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(100dvw, -50%);
+  background-color: #5A6449;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  color: #741100;
+  border: solid 2px black;
+  box-shadow: 1px 1px 6px 6px rgba(0, 0, 0, 0.404);
+  z-index: 15;
+  transition: all 350ms ease-in-out;
+}
+
+.open-overlay {
+  transform: translate(-50%, -50%);
 }
