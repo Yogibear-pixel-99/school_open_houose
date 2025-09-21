@@ -123,7 +123,9 @@ export default function ContactForm() {
    */
   const handleSubmit = (event: any) => {
     event.preventDefault();
-    let payload = contactData;
+    const payload = JSON.stringify(contactData);
+    console.log(payload);
+    debugger
     checkIfEmpty();
 
     if (validInputs() && errorsTrue()) {
@@ -146,7 +148,7 @@ export default function ContactForm() {
   function validInputs() {
     checkInputError(/^[a-zA-ZäöüÄÖÜß0-9 ]*$/, contactData.name, "errorName");
     checkInputError(
-      /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
+      /^[A-Za-z0-9._-]+@([A-Za-z0-9-]+\.)+[A-Za-z]{2,}$/,
       contactData.email,
       "errorEmail"
     );
@@ -250,7 +252,7 @@ export default function ContactForm() {
    * Logs success or error to the console.
    * Deletes session storage data on fetch success.
    */
-  const sendData = async (payload:ContactForm) => {
+  const sendData = async (payload:string) => {
     try {
       const response = await fetch(endPoint, {
         method: "POST",
@@ -258,7 +260,7 @@ export default function ContactForm() {
           "Content-Type": "text/plain",
           responseType: "text",
         },
-        body: JSON.stringify(payload),
+        body: payload,
       });
 
       if (!response.ok) {
