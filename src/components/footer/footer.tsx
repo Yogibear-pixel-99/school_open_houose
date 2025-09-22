@@ -31,6 +31,10 @@ export default function Footer() {
             <br />
           </span>
           <span>Webentwickler</span>
+          <br></br>
+          <span>
+          <a href="tel:+436767704199">+43 676 770 41 99</a>
+          </span>
           <br />
           <div>
             <img src={pencil} alt="Bleistift" />
