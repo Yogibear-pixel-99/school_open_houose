@@ -2,7 +2,7 @@
 
 .main-content {
   @include mixins.flexspbtw(space-between, center);
-  background: url("../../assets/images/contact-infos/blackboard-2618793_1920.jpg")
+  background: url("../../assets/images/contact-infos/blackboard-2618793_1920.webp")
     no-repeat center / 100% 100%;
 
   @media (max-width: 1000px) {

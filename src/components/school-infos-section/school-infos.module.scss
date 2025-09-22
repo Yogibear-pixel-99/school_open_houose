@@ -1,9 +1,17 @@
 @use "./../../shared/styles/mixins" as mixins;
 
 .main-content {
-  background-image: url("../../assets/images/school-infos/note_bg_1920.jpg");
+  
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media (orientation: landscape) {
+    background-image: url("../../assets/images/school-infos/note_bg_1920_landscape.webp");
+  }
+
+  @media (orientation: portrait) {
+    background-image: url("../../assets/images/school-infos/note_bg_1920_portrait.webp");
+  }
 
   > h1 {
     text-align: center;

@@ -15,16 +15,9 @@
   background-position: left;
   background-size: cover;
   flex: 1;
+    background-image: url("../../assets/images/hero-section/students-3518726_1920NEW.webp");
+  
 
-  @media (min-width: 1281px) {
-    background-image: url("../../assets/images/hero-section/students-3518726_1920.jpg");
-  }
-  @media (max-width: 1280px) {
-    background-image: url("../../assets/images/hero-section/students-3518726_1280.jpg");
-  }
-  @media (max-width: 640px) {
-    background-image: url("../../assets/images/hero-section/students-3518726_640.jpg");
-  }
 }
 
 .shadow-separator {

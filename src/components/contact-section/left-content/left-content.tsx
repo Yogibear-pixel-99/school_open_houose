@@ -1,5 +1,5 @@
 import styles from "./left-content.module.scss";
-import childAndBooks from "../../../assets/images/contact-infos/girl-160172_640.png";
+import childAndBooks from "../../../assets/images/contact-infos/girl-160172_640.webp";
 
 /**
  * React component that renders the left side of the contact section.

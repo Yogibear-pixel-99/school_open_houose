@@ -1,9 +1,9 @@
 import "./App.scss";
 import Imprint from "./components/imprint/imprint";
-import { MainPage } from "./shared/components/logic/routes";
+import { MainPage } from "./shared/logic/routes";
 import Footer from "./components/footer/footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ScrollToElement from "./shared/components/logic/ScrollToElement";
+import ScrollToElement from "./shared/logic/scrollToElement";
 import PrivacyPolicy from "./components/privacy-policy/privacy-policy";
 
 

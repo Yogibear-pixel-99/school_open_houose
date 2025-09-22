@@ -2,7 +2,7 @@ import MyLogo from "../../shared/components/my-logo/my-logo";
 import styles from "./footer.module.scss";
 import { Link } from "react-router-dom";
 import pencil from "../../assets/images/footer/pencil-underline_640_small.png";
-import kidsLogo from "../../assets/images/footer/kids-160168_1280.png";
+import kidsLogo from "../../assets/images/footer/kids-160168_1280_small.png";
 
 /**
  * React component that renders the website footer.
