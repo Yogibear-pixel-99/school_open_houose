@@ -89,11 +89,8 @@ export default function SchoolInfos() {
               <div>
                 <span>{data.days}</span>
                 <div>
-                  <span>{data.from}</span>
-                  <span className={`${data.from === "" ? "hide-display" : ""}`}>
-                    {" "}
-                    -{" "}
-                  </span>
+                  {data.from === "" ? null : <span>{data.from}</span>}
+                  {data.from === "" ? null : <span> - </span>}
                   <span>{data.to}</span>
                 </div>
               </div>
@@ -118,10 +115,10 @@ export default function SchoolInfos() {
                 <span>{data.days}</span>
                 <div>
                   <span>{data.from}</span>
-                  <span className={`${data.from === "" ? "hide-display" : ""}`}>
-                    {" "}
-                    -{" "}
-                  </span>
+
+                  {data.from === "" ? null : <span>{data.from}</span>}
+                  {data.from === "" ? null : <span> - </span>}
+
                   <span>{data.to}</span>
                 </div>
               </div>

@@ -21,22 +21,27 @@
       
       }
       @media (max-width: 440px) {
-        display: flex;
+        @include mixins.flexspbtw(center, center);
         flex-direction: column;
+        gap: 8px;
+      }
+
+      > span {
+        text-align: center;
       }
 
       > div {
         @include mixins.flexspbtw();
         gap: 24px;
         @media (max-width: 440px) {
-          flex-direction: column;
-          gap: 4px;
-          margin-top: 12px;
-          align-items: center;
+            flex-direction: column;
+            gap: 2px;   
+            @include mixins.flexspbtw(center, center);
         }
 
         > div {
-          @include mixins.flexspbtw();
+          @include mixins.flexspbtw(flex-end, center);
+          gap: 8px;
           width: 224px;
 
           @media (max-width: 520px) {
@@ -45,8 +50,9 @@
           }
 
           @media (max-width: 440px) {
-            width: 185px;
             justify-content: center;
+            align-self: center;
+            gap: 8px;
           }
         }
       }

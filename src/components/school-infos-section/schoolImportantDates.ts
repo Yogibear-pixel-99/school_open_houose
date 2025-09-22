@@ -67,7 +67,7 @@ export const importantSchoolDates = [
     from: "",
     to: "10.03.2026",
     days: "",
-    justification: "„Die Reise zum Mittelpunkt des Waldes“ Landestheater",
+    justification: "Die Reise zum Mittelpunkt des Waldes - Landestheater",
   },
   {
     id: 11,
