@@ -9,7 +9,7 @@
 .main-content {
   @include mixins.flexspbtw(center, flex-start);
   flex-direction: column;
-  gap: 24px;
+  gap: 18px;
   position: relative;
   z-index: 10;
 

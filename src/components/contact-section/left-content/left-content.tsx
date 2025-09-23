@@ -23,15 +23,14 @@ export default function LeftContactContent() {
         <p className={`${styles["text-box"]} main-txt-font`}>
           Für fehlende Inhalte, Anregungen, Ideen oder Wünsche bezüglich dieser
           Seite kontaktiert mich bitte – entweder per WhatsApp oder über das
-          vorhandene Kontaktformular daneben.
+          vorhandene Kontaktformular. Danke.
         </p>
         <p className={`main-txt-font`}>
-          Die Idee dieser Seite ist es, alle Infos bezüglich des Schuljahres und
-          unserer Schule auf einer Seite zu bündeln. Kein lästiges Zettelsuchen
-          oder ständiges Nachfragen mehr.
+          Die Idee ist es, alle Infos bezüglich des Schuljahres und
+          unserer Schule auf einer Seite zu haben.
         </p>
         <p className={`main-txt-font`}>
-          Alle Infos auf einen Blick – immer und überall, auch am Smartphone.
+          Alle Infos auf einen Blick, auch am Smartphone.
         </p>
       </div>
       <div className={styles['img-wrapper']}>

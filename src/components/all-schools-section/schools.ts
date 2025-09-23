@@ -56,6 +56,12 @@ export const allSchools: SchoolsData = [
     hrefPath: "https://www.stifterschule.at/",
     dayOfOpen: "11. November 2025",
   },
+      {
+  name: "Bundesrealgymnasium Fadingerstraße",
+  address: "Fadingerstraße 4, 4020 Linz",
+  hrefPath: "https://www.fadi.at/",
+  dayOfOpen: "17. Oktober 2025"
+  },
   //     {
   // name: "",
   // address: "",
