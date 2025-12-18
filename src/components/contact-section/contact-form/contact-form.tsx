@@ -124,7 +124,7 @@ export default function ContactForm() {
    * Handles form submission: validates inputs and sends data if valid.
    * @param {React.FormEvent<HTMLFormElement>} event - The form submit event
    */
-  const handleSubmit = (event: any) => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     checkIfEmpty();

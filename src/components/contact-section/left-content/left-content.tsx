@@ -25,12 +25,9 @@ export default function LeftContactContent() {
           Seite kontaktiert mich bitte – entweder per WhatsApp oder über das
           vorhandene Kontaktformular. Danke.
         </p>
+
         <p className={`main-txt-font`}>
-          Die Idee ist es, alle Infos bezüglich des Schuljahres und
-          unserer Schule auf einer Seite zu haben.
-        </p>
-        <p className={`main-txt-font`}>
-          Alle Infos auf einen Blick, auch am Smartphone.
+          Die Idee war es, alle Termine und Informationen des kommenden Schuljahres auf einen Blick zu haben, auch am Smartphone.
         </p>
       </div>
       <div className={styles['img-wrapper']}>
